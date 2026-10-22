@@ -92,6 +92,8 @@ section{padding:64px 0}
 .proof{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .clients{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
 .client{border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px;background:var(--bg)}
+.client .logo{height:52px;display:flex;align-items:center}
+.client .logo img{max-height:52px;max-width:140px;object-fit:contain}
 .client .mono{width:44px;height:44px;border-radius:10px;background:var(--navy);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
 .client b{font-size:15px;line-height:1.3}
 .client span{font-size:13px;color:var(--muted)}
@@ -243,10 +245,10 @@ const CONFIG = {
 };
 
 /* ============ AGENSI (tambah / ubah di sini) ============
-   mono = singkatan pada kotak, what = apa yang dibekalkan */
+   mono = singkatan (dipapar jika tiada logo), logo = URL atau fail logo (pilihan), what = apa yang dibekalkan */
 const CLIENTS = [
-  {mono:"MBJB",  n:"Majlis Bandaraya Johor Bahru",              t:"Pihak Berkuasa Tempatan",                 what:"Penghancur kertas industri"},
-  {mono:"MHK",   n:"Mahkamah Johor",                            t:"Mahkamah Tinggi, Syariah & daerah",       what:"Sistem kehadiran"},
+  {mono:"MBJB",  logo:"https://www.mbjb.gov.my/sites/default/files/2022-06/logo_mbjb%402x.png", n:"Majlis Bandaraya Johor Bahru",              t:"Pihak Berkuasa Tempatan",                 what:"Penghancur kertas industri"},
+  {mono:"MHK",   logo:"https://www.kehakiman.gov.my/sites/default/files/gallery/main%20logo.png", n:"Mahkamah Johor",                            t:"Mahkamah Tinggi, Syariah & daerah",       what:"Sistem kehadiran"},
   {mono:"MDAB",  n:"Muzium Diraja Abu Bakar",                   t:"Warisan & pelancongan",                   what:"Digital signage"},
   {mono:"MOTAC", n:"Kementerian Pelancongan, Seni dan Budaya",  t:"Kementerian (MOTAC)",                     what:"Mesin penyalin Toshiba"},
   {mono:"DBD",   n:"Desa Bina Diri Mersing",                    t:"Institusi kebajikan",                     what:"Mesin penyalin Toshiba"}
@@ -306,7 +308,8 @@ document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya 
 document.querySelectorAll('.js-mail').forEach(a=>a.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Pertanyaan: Penyelesaian Toshiba"));
 document.querySelectorAll('.js-tel').forEach(a=>a.href="tel:+"+CONFIG.wa);
 
-$('#clients').innerHTML=CLIENTS.map(c=>`<div class="client"><div class="mono">${esc(c.mono)}</div><b>${esc(c.n)}</b><span>${esc(c.t)}</span><div class="what">✓ ${esc(c.what)}</div></div>`).join("");
+const monoBox=c=>`<div class="mono">${esc(c.mono)}</div>`;
+$('#clients').innerHTML=CLIENTS.map(c=>`<div class="client">${c.logo?`<div class="logo"><img src="${c.logo}" alt="${esc(c.n)}" loading="lazy" onerror="this.parentNode.outerHTML='${monoBox(c).replace(/"/g,'&quot;')}'"></div>`:monoBox(c)}<b>${esc(c.n)}</b><span>${esc(c.t)}</span><div class="what">✓ ${esc(c.what)}</div></div>`).join("");
 
 function card(k){
   const p=PROD[k];
