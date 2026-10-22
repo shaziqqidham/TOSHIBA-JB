@@ -230,7 +230,10 @@ footer span{opacity:.7}
   <div class="calc">
     <div class="in">
       <label>Bilangan mesin pencetak / penyalin<input id="cMach" type="number" inputmode="numeric" min="0" value="5"></label>
-      <label>Jumlah muka surat sebulan (semua mesin)<small>Anggaran pun tak apa</small><input id="cPages" type="number" inputmode="numeric" min="0" value="20000"></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <label>Hitam/putih sebulan<small>Muka surat, semua mesin</small><input id="cMono" type="number" inputmode="numeric" min="0" value="15000"></label>
+        <label>Berwarna sebulan<small>Muka surat, semua mesin</small><input id="cColour" type="number" inputmode="numeric" min="0" value="3000"></label>
+      </div>
       <label>Kos sebulan sekarang (RM)<small>Sewa, toner, kertas & penyelenggaraan</small><input id="cCost" type="number" inputmode="decimal" min="0" value="3000"></label>
     </div>
     <div class="out">
@@ -240,8 +243,8 @@ footer span{opacity:.7}
         <div><b id="cPerPage">RM 0.00</b><span>kos setiap muka surat</span></div>
         <div><b id="cPerMach">RM 0</b><span>kos setiap mesin / bulan</span></div>
       </div>
-      <p class="note">Ramai pejabat tak sedar jumlah sebenar sehingga dikira setahun. Hantar angka ini dan saya sediakan perbandingan kos untuk pejabat anda, tanpa sebarang komitmen.</p>
-      <a class="pill pill-wa" id="cSend" href="#" target="_blank" rel="noopener">💬 Hantar & dapatkan perbandingan</a>
+      <p class="note">Ramai pejabat tak sedar jumlah sebenar sehingga dikira setahun. Nak tahu berapa yang boleh dijimatkan dengan kadar Toshiba? Hantar angka ini dan saya kira untuk pejabat anda, tanpa sebarang komitmen.</p>
+      <a class="pill pill-wa" id="cSend" href="#" target="_blank" rel="noopener">💬 Tanya berapa boleh jimat</a>
     </div>
   </div>
 </div></section>
@@ -413,13 +416,14 @@ document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{sh
 /* ============ KALKULATOR ============ */
 const rm=n=>"RM "+Math.round(n).toLocaleString("en-MY");
 function calc(){
-  const m=Math.max(0,+$('#cMach').value||0), p=Math.max(0,+$('#cPages').value||0), c=Math.max(0,+$('#cCost').value||0);
+  const m=Math.max(0,+$('#cMach').value||0), bw=Math.max(0,+$('#cMono').value||0), col=Math.max(0,+$('#cColour').value||0), c=Math.max(0,+$('#cCost').value||0);
+  const p=bw+col;
   $('#cYear').textContent=rm(c*12);
   $('#cPerPage').textContent=p?"RM "+(c/p).toFixed(3):"–";
   $('#cPerMach').textContent=m?rm(c/m):"–";
-  $('#cSend').href=wa("Salam "+first+", ini anggaran kos cetakan pejabat kami:\n- Bilangan mesin: "+m+"\n- Muka surat sebulan: "+p.toLocaleString("en-MY")+"\n- Kos sebulan: "+rm(c)+"\n- Anggaran setahun: "+rm(c*12)+"\n\nBoleh sediakan perbandingan kos untuk kami?");
+  $('#cSend').href=wa("Salam "+first+", ini anggaran kos cetakan pejabat kami:\n- Bilangan mesin: "+m+"\n- Hitam/putih sebulan: "+bw.toLocaleString("en-MY")+" muka surat\n- Berwarna sebulan: "+col.toLocaleString("en-MY")+" muka surat\n- Kos sebulan: "+rm(c)+"\n- Anggaran setahun: "+rm(c*12)+"\n\nBerapa yang boleh kami jimatkan dengan kadar Toshiba?");
 }
-['#cMach','#cPages','#cCost'].forEach(s=>$(s).addEventListener('input',calc)); calc();
+['#cMach','#cMono','#cColour','#cCost'].forEach(s=>$(s).addEventListener('input',calc)); calc();
 
 /* ============ SIMPAN KE TELEFON (vCard) ============ */
 $('#saveContact').addEventListener('click',()=>{
