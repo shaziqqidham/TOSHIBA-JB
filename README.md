@@ -4,7 +4,14 @@ A customer-focused digital brochure for Malaysian government agencies, state bod
 
 Prepared by **Shaziq Idham**, Business Development Executive (Government Accounts), Toshiba Tec Malaysia, Johor Bahru Branch.
 
-## What's inside
+## Pages
+- `index.html`: short, Bahasa Malaysia main page. 5 pain points, agencies served, procurement options, contact
+- `katalog.html`: full catalogue (44 products, 25 software solutions) with official brochures
+
+## Adding products later (shredder, CCTV, VoIP, etc.)
+In `index.html`, add an item to `PROD`, then list its key under the right pain point in `PAINS`. Agencies go in `CLIENTS`.
+
+## What's in the catalogue
 - **"What is your office struggling with?"**: 8 common public-sector challenges, each showing the problem, the outcome, and recommended products and software
 - **Printer sizing guide**: Compact / Standard / Enterprise by office size
 - **Full catalogue**: 44 products with filters, search, official brochure PDFs and spec links

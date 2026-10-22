@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ms">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Toshiba Tec Malaysia — Solutions for Government, State & GLC</title>
-<meta name="description" content="Secure printing, records digitalisation, asset tagging, public counters and smart meeting rooms for Malaysian government agencies, state bodies and GLCs.">
+<title>Toshiba Tec Malaysia — Penyelesaian Pejabat untuk Kerajaan & GLC</title>
+<meta name="description" content="Kurangkan kos cetakan, digitalkan fail, permudah audit aset dan lindungi dokumen rasmi. Penyelesaian pejabat untuk agensi kerajaan, PBT dan GLC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -12,8 +12,7 @@
   --red:#D7000F; --red-dark:#A8000C; --red-soft:#FFF1F2;
   --navy:#0C1A2B; --navy-2:#13263C;
   --ink:#18212C; --muted:#5A6676; --line:#E2E6EC;
-  --bg:#F6F7F9; --card:#FFFFFF; --green:#1F9D55; --wa:#25D366;
-  --radius:14px;
+  --bg:#F6F7F9; --green:#1F9D55; --wa:#25D366; --r:14px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -21,357 +20,193 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);backg
 a{color:inherit}
 img{max-width:100%;display:block}
 button{font:inherit;cursor:pointer}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
-h2.h{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.015em;line-height:1.15;margin-top:6px}
-.sub{color:var(--muted);font-size:16px;max-width:620px;margin-top:10px}
-section{padding:72px 0}
-
-/* ---------- Header ---------- */
-.top{background:var(--navy);color:#fff}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.brand{display:flex;align-items:center;gap:12px;font-size:13px;opacity:.9}
-.brand img{height:22px;filter:brightness(0) invert(1)}
-.brand span{border-left:1px solid rgba(255,255,255,.3);padding-left:12px}
-.top .call{display:flex;gap:10px;align-items:center;font-size:14px}
-.pill{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:40px;border:none}
-.pill-wa{background:var(--wa);color:#063;}
+h2.h{font-size:clamp(26px,3.6vw,36px);font-weight:800;letter-spacing:-.015em;line-height:1.15;margin-top:6px}
+.sub{color:var(--muted);font-size:16px;max-width:600px;margin-top:10px}
+section{padding:64px 0}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:13px 20px;border-radius:40px;border:none}
+.pill-wa{background:var(--wa);color:#04361a}
 .pill-red{background:var(--red);color:#fff}
 .pill-red:hover{background:var(--red-dark)}
-.pill-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.pill-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.3)}
 .pill-line{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .pill-line:hover{border-color:var(--ink)}
 
-/* ---------- Hero ---------- */
-.hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(215,0,15,.28),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:64px 0 88px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-.hero .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:30px}
-.hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:#ff4d5a;display:inline-block}
-.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.04;font-weight:800;letter-spacing:-.025em;margin-top:18px}
+/* Top */
+.top{background:var(--navy);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;font-size:13px}
+.brand img{height:20px;filter:brightness(0) invert(1)}
+.brand span{border-left:1px solid rgba(255,255,255,.3);padding-left:12px;opacity:.85}
+.top .pill{padding:9px 14px;font-size:14px}
+
+/* Hero */
+.hero{background:radial-gradient(900px 420px at 90% -10%,rgba(215,0,15,.3),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:60px 0 72px}
+.hero .tag{display:inline-block;font-size:13px;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:30px}
+.hero h1{font-size:clamp(34px,5.4vw,56px);line-height:1.06;font-weight:800;letter-spacing:-.025em;margin-top:18px;max-width:780px}
 .hero h1 em{font-style:normal;color:#ff5a66}
-.hero .bm{opacity:.75;font-style:italic;margin-top:12px;font-size:16px}
-.hero p.lead{font-size:18px;opacity:.9;margin-top:18px;max-width:560px}
+.hero p{font-size:18px;opacity:.88;margin-top:16px;max-width:600px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.outcomes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.outcome{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:18px}
-.outcome b{display:block;font-size:22px;font-weight:800;color:#fff}
-.outcome span{font-size:13.5px;opacity:.8}
-.who{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
-.who span{font-size:12.5px;padding:5px 11px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
 
-/* ---------- Sticky nav ---------- */
-nav.sticky{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none;align-items:center}
-nav a{white-space:nowrap;text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:30px;color:var(--muted)}
-nav a:hover{background:var(--bg);color:var(--ink)}
-nav .shortlist-btn{margin-left:auto;background:var(--navy);color:#fff;border:none;padding:8px 14px;border-radius:30px;font-weight:700;font-size:14px;white-space:nowrap}
-nav .shortlist-btn b{background:var(--red);border-radius:20px;padding:1px 8px;margin-left:6px;font-size:12px}
+/* Pain points */
+.pains{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.pain{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:all .18s}
+.pain:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 10px 24px rgba(12,26,43,.08)}
+.pain.on{border-color:var(--red);background:var(--red-soft);box-shadow:0 0 0 2px var(--red) inset}
+.pain .ico{font-size:28px}
+.pain h3{font-size:15.5px;line-height:1.3}
+.pain .go{margin-top:auto;font-size:13px;font-weight:700;color:var(--red)}
 
-/* ---------- Challenges ---------- */
-.chal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
-.chal{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:all .18s}
-.chal:hover{border-color:var(--red);box-shadow:0 10px 24px rgba(12,26,43,.08);transform:translateY(-2px)}
-.chal.active{border-color:var(--red);background:var(--red-soft);box-shadow:0 0 0 2px var(--red) inset}
-.chal .ico{font-size:26px}
-.chal h3{font-size:16px;line-height:1.3}
-.chal .bmq{font-size:12.5px;color:var(--muted);font-style:italic}
-.chal .go{margin-top:auto;font-size:13px;font-weight:700;color:var(--red)}
-
-.answer{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:none}
+.answer{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:none}
 .answer.show{display:block;animation:rise .3s ease}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.answer .head{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.answer .prob,.answer .sol{padding:26px}
-.answer .prob{background:var(--navy);color:#fff}
-.answer .prob .k{color:#ff8a92}
-.answer .sol .k{color:var(--green)}
-.answer h3{font-size:20px;margin:6px 0 10px;line-height:1.3}
-.answer ul{list-style:none;display:grid;gap:8px;font-size:14.5px}
-.answer .prob li::before{content:"✕ ";color:#ff8a92;font-weight:800}
-.answer .sol li::before{content:"✓ ";color:var(--green);font-weight:800}
-.answer .recs{padding:24px;border-top:1px solid var(--line)}
-.answer .recs h4{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.answer .foot{padding:18px 24px;background:var(--bg);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.ba{display:grid;grid-template-columns:1fr 1fr}
+.ba>div{padding:24px}
+.before{background:var(--navy);color:#fff}
+.before .k{color:#ff8a92}
+.after .k{color:var(--green)}
+.ba h3{font-size:19px;margin:6px 0 12px;line-height:1.3}
+.ba ul{list-style:none;display:grid;gap:9px;font-size:15px}
+.before li::before{content:"✕  ";color:#ff8a92;font-weight:800}
+.after li::before{content:"✓  ";color:var(--green);font-weight:800}
+.recs{padding:22px 24px;border-top:1px solid var(--line)}
+.recs h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.card .img{height:150px;background:linear-gradient(180deg,#F3F5F8,#E9EDF2);display:flex;align-items:center;justify-content:center;padding:14px}
+.card .img img{max-height:122px;object-fit:contain;mix-blend-mode:multiply}
+.card .img .ico{font-size:52px}
+.card .img.noimg img{display:none}
+.card .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .role{font-size:12px;font-weight:700;color:var(--red-dark);background:var(--red-soft);padding:3px 8px;border-radius:6px;align-self:flex-start}
+.card h5{font-size:15px;line-height:1.3}
+.card p{font-size:13.5px;color:var(--muted)}
+.card .lnk{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700}
+.card .lnk a{color:var(--red);text-decoration:none}
+.also{margin-top:14px;font-size:14px;color:var(--muted)}
+.also b{color:var(--ink)}
+.afoot{padding:18px 24px;background:var(--bg);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-weight:600}
 
-/* ---------- Product cards ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
-.card:hover{box-shadow:0 12px 30px rgba(12,26,43,.10);transform:translateY(-2px)}
-.card .img{height:180px;background:linear-gradient(180deg,#F3F5F8,#E9EDF2);display:flex;align-items:center;justify-content:center;padding:16px;position:relative}
-.card .img img{max-height:150px;object-fit:contain;mix-blend-mode:multiply}
-.card .img .ph{display:none;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-weight:700;font-size:13px;text-align:center}
-.card .img.noimg img{display:none}.card .img.noimg .ph{display:flex}
-.card .img .ph i{font-style:normal;font-size:40px}
-.badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;background:#fff;border:1px solid var(--line);padding:3px 8px;border-radius:20px;color:var(--muted)}
-.card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card .for{font-size:12.5px;font-weight:700;color:var(--red-dark);background:var(--red-soft);padding:4px 9px;border-radius:6px;align-self:flex-start}
-.card h4{font-size:16px;line-height:1.3}
-.card ul{list-style:none;font-size:13.5px;color:var(--ink);display:grid;gap:4px}
-.card ul li{padding-left:18px;position:relative}
-.card ul li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
-.card .acts{margin-top:auto;padding-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;text-decoration:none;padding:9px 10px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink)}
-.btn:hover{border-color:var(--ink)}
-.btn.add{background:var(--navy);color:#fff;border-color:var(--navy);grid-column:1 / -1}
-.btn.add.on{background:var(--green);border-color:var(--green)}
+/* Proof */
+.proof{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.clients{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+.client{border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px;background:var(--bg)}
+.client .mono{width:44px;height:44px;border-radius:10px;background:var(--navy);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.client b{font-size:15px;line-height:1.3}
+.client span{font-size:13px;color:var(--muted)}
+.client .what{margin-top:auto;font-size:12.5px;font-weight:700;color:var(--green)}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--muted)}
+.stats b{display:block;font-size:22px;color:var(--ink)}
 
-/* ---------- Sizing guide ---------- */
-.size{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px}
-.tier .lvl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.tier h3{font-size:20px}
-.tier .meta{display:flex;gap:8px;flex-wrap:wrap}
-.tier .meta span{font-size:12.5px;background:var(--bg);padding:4px 10px;border-radius:20px}
-.tier .models{font-size:14px;color:var(--muted)}
-.tier .models b{color:var(--ink)}
-.tier.mid{border:2px solid var(--red);position:relative}
-.tier.mid::before{content:"Most common for district offices";position:absolute;top:-12px;left:20px;background:var(--red);color:#fff;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:20px}
+/* Buy */
+.buy{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.buy div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.buy b{display:block;font-size:16px;margin-bottom:4px}
+.buy span{font-size:14px;color:var(--muted)}
 
-/* ---------- Catalogue ---------- */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 20px;align-items:center}
-.chip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--muted)}
-.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.search{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:9px 16px;font:inherit;font-size:14px;min-width:220px;background:#fff}
-.count{font-size:13px;color:var(--muted);margin-bottom:12px}
+/* Catalogue link */
+.more{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:1px dashed #C9D0DA;border-radius:var(--r);padding:20px 22px;margin-top:20px}
+.more p{font-size:15px}
+.more p span{color:var(--muted);display:block;font-size:13.5px}
 
-/* ---------- Solutions ---------- */
-.sols{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:28px}
-.sol{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:6px}
-.sol .ico{font-size:22px}
-.sol h4{font-size:15px}
-.sol p{font-size:13.5px;color:var(--muted)}
-.sol .for{font-size:12.5px;font-weight:700;color:var(--red-dark)}
-.sol .lnk{display:flex;gap:12px;margin-top:auto;padding-top:8px;font-size:13px;font-weight:700}
-.sol .lnk a{text-decoration:none;color:var(--red)}
-.sol .lnk button{border:none;background:none;color:var(--navy);font-weight:700;padding:0}
-
-/* ---------- Why / process / FAQ ---------- */
-.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
-.why div{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.why h3{font-size:16px;margin:8px 0 6px}
-.why p{font-size:14px;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px;counter-reset:s}
-.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
-.step::before{counter-increment:s;content:counter(s);display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
-.step h4{font-size:15px}
-.step p{font-size:13.5px;color:var(--muted);margin-top:4px}
-.buyways{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.buyways span{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:30px;font-size:14px;font-weight:600}
-.faq{margin-top:28px;display:grid;gap:10px}
-.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px}
-.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
-.faq summary::after{content:"+";font-size:20px;color:var(--red)}
-.faq details[open] summary::after{content:"–"}
-.faq p{margin-top:10px;color:var(--muted);font-size:14.5px}
-
-/* ---------- Contact ---------- */
-.contact{background:linear-gradient(135deg,var(--red),#8E000A);color:#fff;border-radius:22px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
-.contact h2{font-size:clamp(24px,3vw,34px);line-height:1.15}
+/* Contact */
+.contact{background:linear-gradient(135deg,var(--red),#8E000A);color:#fff;border-radius:22px;padding:36px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.contact h2{font-size:clamp(24px,3vw,32px);line-height:1.15}
 .contact p{opacity:.9;margin-top:10px}
-.rep{background:#fff;color:var(--ink);border-radius:16px;padding:24px}
+.rep{background:#fff;color:var(--ink);border-radius:16px;padding:22px}
 .rep .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .rep .nm{font-size:22px;font-weight:800;margin-top:4px}
 .rep .rl{font-size:14px;color:var(--muted)}
-.rep .rows{margin-top:14px;display:grid;gap:6px;font-size:14px}
+.rep .rows{margin-top:12px;display:grid;gap:6px;font-size:14px}
 .rep .rows a{text-decoration:none;font-weight:600}
-.rep .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.vendor{margin-top:16px;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:3px}
-
-footer{background:var(--navy);color:#fff;padding:36px 0;margin-top:72px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;opacity:.85}
-footer .note{font-size:12px;opacity:.6;max-width:640px}
-
-/* ---------- Shortlist drawer ---------- */
-.drawer{position:fixed;right:0;top:0;bottom:0;width:min(420px,100%);background:#fff;z-index:60;box-shadow:-20px 0 40px rgba(0,0,0,.18);transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
-.drawer.open{transform:none}
-.drawer header{padding:20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.drawer header h3{font-size:18px}
-.drawer .x{border:none;background:var(--bg);width:34px;height:34px;border-radius:50%;font-size:18px}
-.drawer .items{flex:1;overflow:auto;padding:12px 20px;display:grid;gap:8px;align-content:start}
-.drawer .it{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;font-weight:600}
-.drawer .it button{border:none;background:none;color:var(--muted);font-size:18px}
-.drawer .empty{color:var(--muted);font-size:14px;padding:20px 0}
-.drawer .form{padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:8px}
-.drawer input,.drawer textarea{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:14px;width:100%}
-.drawer .send{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.scrim{position:fixed;inset:0;background:rgba(12,26,43,.4);z-index:55;display:none}
-.scrim.show{display:block}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:30px;font-size:14px;font-weight:600;z-index:70;transition:transform .25s}
-.toast.show{transform:translateX(-50%) translateY(0)}
-.fab{position:fixed;right:18px;bottom:18px;z-index:45;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);text-decoration:none;font-size:26px}
+.vendor{margin-top:14px;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;display:grid;gap:2px}
+footer{background:var(--navy);color:#fff;padding:28px 0;margin-top:64px;font-size:12.5px;opacity:.95}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer span{opacity:.7}
+.fab{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);text-decoration:none;font-size:27px}
 
 @media (max-width:980px){
-  .hero .wrap,.contact,.answer .head{grid-template-columns:1fr}
-  .chal-grid{grid-template-columns:repeat(2,1fr)}
-  .why{grid-template-columns:1fr 1fr}
-  .size{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .search{margin-left:0;width:100%}
+  .pains{grid-template-columns:repeat(2,1fr)}
+  .clients{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:1fr 1fr}
+  .ba,.contact{grid-template-columns:1fr}
+  .buy{grid-template-columns:1fr 1fr}
 }
 @media (max-width:560px){
-  .chal-grid,.why,.steps,.outcomes{grid-template-columns:1fr}
-  .top .call .num{display:none}
+  .pains,.grid,.buy{grid-template-columns:1fr}
+  .clients{grid-template-columns:1fr 1fr}
+  .brand span{display:none}
+  section{padding:48px 0}
   .contact{padding:24px}
-  section{padding:52px 0}
 }
-@media print{
-  nav.sticky,.fab,.drawer,.scrim,.toast,.btn.add,.filters{display:none!important}
-  .answer{display:block!important}
-  .card,.tier,.sol,.chal{break-inside:avoid}
-  .hero,.top,.contact,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-}
+@media print{.fab{display:none}.answer{display:block!important}}
 </style>
 </head>
 <body>
 
-<!-- ============ TOP BAR ============ -->
 <div class="top"><div class="wrap">
-  <div class="brand"><img src="https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg" alt="Toshiba"><span>Public Sector & GLC</span></div>
-  <div class="call"><span class="num" data-cfg="phone"></span><a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a></div>
+  <div class="brand"><img src="https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg" alt="Toshiba"><span>Kerajaan · Negeri · GLC</span></div>
+  <a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div></div>
 
-<!-- ============ HERO ============ -->
+<!-- 1. HERO -->
 <header class="hero"><div class="wrap">
-  <div>
-    <div class="eyebrow"><i></i> For Government Agencies · State Bodies · PBT · GLCs</div>
-    <h1>Less paperwork.<br>Faster counters.<br><em>Safer official data.</em></h1>
-    <div class="bm">Kurangkan kertas kerja, percepatkan urusan kaunter, lindungi data rasmi.</div>
-    <p class="lead">Tell us the problem your office is facing. We'll recommend the right printers, scanners, systems and software, and support them after installation.</p>
-    <div class="ctas">
-      <a class="pill pill-red" href="#challenges">Find a solution for my office →</a>
-      <a class="pill pill-ghost" href="#contact">Book a free site assessment</a>
-    </div>
-    <div class="who"><span>Ministries & Departments</span><span>State Secretariats</span><span>Local Authorities (PBT)</span><span>Statutory Bodies</span><span>Public Universities</span><span>Hospitals & Clinics</span><span>GLCs</span></div>
-  </div>
-  <div class="outcomes">
-    <div class="outcome"><b>Control</b><span>See and cap printing cost per department, user or project.</span></div>
-    <div class="outcome"><b>Find</b><span>Search digital records in seconds instead of hunting through filing rooms.</span></div>
-    <div class="outcome"><b>Protect</b><span>Encrypted storage, user login and secure release for confidential documents.</span></div>
-    <div class="outcome"><b>Serve</b><span>Shorter queues with reliable counters, kiosks and receipt printers.</span></div>
+  <span class="tag">Untuk Jabatan Kerajaan · PBT · Badan Berkanun · GLC</span>
+  <h1>Kurang kertas. Kurang kos.<br><em>Lebih selamat.</em></h1>
+  <p>Pilih masalah pejabat anda di bawah. Kami tunjukkan penyelesaian yang sesuai, tanpa perlu baca katalog panjang.</p>
+  <div class="ctas">
+    <a class="pill pill-red" href="#masalah">Apa masalah pejabat anda? →</a>
+    <a class="pill pill-ghost js-wa" href="#" target="_blank" rel="noopener">Tempah lawatan percuma</a>
   </div>
 </div></header>
 
-<nav class="sticky"><div class="wrap">
-  <a href="#challenges">Your challenge</a>
-  <a href="#sizing">Choose a printer</a>
-  <a href="#catalogue">All products</a>
-  <a href="#software">Software</a>
-  <a href="#how">How to buy</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
-  <button class="shortlist-btn" id="openList">My enquiry list <b id="listCount">0</b></button>
-</div></nav>
-
-<!-- ============ CHALLENGES ============ -->
-<section id="challenges"><div class="wrap">
-  <div class="k">Start with your problem</div>
-  <h2 class="h">What is your office struggling with?</h2>
-  <p class="sub">Pick the closest match. We'll show what changes for your team and which products fit. <i>Pilih cabaran yang paling hampir dengan pejabat anda.</i></p>
-  <div class="chal-grid" id="chalGrid"></div>
+<!-- 2. PAIN POINTS -->
+<section id="masalah"><div class="wrap">
+  <div class="k">Mula dengan masalah</div>
+  <h2 class="h">Apa yang paling menyusahkan pejabat anda?</h2>
+  <p class="sub">Pilih satu.</p>
+  <div class="pains" id="pains"></div>
   <div class="answer" id="answer"></div>
 </div></section>
 
-<!-- ============ SIZING ============ -->
-<section id="sizing" style="padding-top:0"><div class="wrap">
-  <div class="k">Not sure which printer?</div>
-  <h2 class="h">Pick by the size of your office</h2>
-  <p class="sub">A quick guide for multifunction printers (print, copy, scan, fax). We'll confirm the right model after a free usage check.</p>
-  <div class="size">
-    <div class="tier">
-      <div class="lvl">Small unit · counter · sub-office</div>
-      <h3>Compact</h3>
-      <div class="meta"><span>Approx. 1–10 users</span><span>Light daily printing</span><span>Limited space</span></div>
-      <div class="models">Suggested: <b>e-STUDIO 2822AF, 2329A/2829A, 2528A, 2021AC/2521AC, 331AC/401AC, 409S, 339CS</b></div>
-      <a class="pill pill-line" href="#catalogue" data-jump="mfp-compact" style="align-self:flex-start;margin-top:auto">See compact models</a>
-    </div>
-    <div class="tier mid">
-      <div class="lvl">District office · branch · bahagian</div>
-      <h3>Standard</h3>
-      <div class="meta"><span>Approx. 10–40 users</span><span>Daily scanning</span><span>Colour or mono</span></div>
-      <div class="models">Suggested: <b>e-STUDIO 3025AC/3525AC/4525AC (colour), 3028A/3528A/4528A (mono)</b></div>
-      <a class="pill pill-line" href="#catalogue" data-jump="mfp-standard" style="align-self:flex-start;margin-top:auto">See standard models</a>
-    </div>
-    <div class="tier">
-      <div class="lvl">HQ · state secretariat · central print room</div>
-      <h3>Enterprise</h3>
-      <div class="meta"><span>40+ users</span><span>High volume</span><span>Booklets & finishing</span></div>
-      <div class="models">Suggested: <b>e-STUDIO 5525AC/6525AC, 5528A/6528A, 6526AC/7527AC, 6529A/7529A/9029A</b></div>
-      <a class="pill pill-line" href="#catalogue" data-jump="mfp-enterprise" style="align-self:flex-start;margin-top:auto">See enterprise models</a>
-    </div>
+<!-- 3. PROOF -->
+<section class="proof"><div class="wrap">
+  <div class="k">Dipercayai oleh</div>
+  <h2 class="h">Agensi yang kami sudah bekalkan</h2>
+  <p class="sub">Antara agensi kerajaan dan PBT yang menggunakan penyelesaian yang kami bekalkan.</p>
+  <div class="clients" id="clients"></div>
+</div></section>
+
+<!-- 4. HOW TO BUY -->
+<section><div class="wrap">
+  <div class="k">Cara perolehan</div>
+  <h2 class="h">Ikut kaedah perolehan agensi anda</h2>
+  <div class="buy">
+    <div><b>Sebut harga</b><span>Sebut harga dan brosur sokongan disediakan mengikut spesifikasi.</span></div>
+    <div><b>Tender</b><span>Kongsi spesifikasi atau iklan ePerolehan, kami bantu padankan model.</span></div>
+    <div><b>Belian terus</b><span>Untuk keperluan segera dan pembelian kecil.</span></div>
+    <div><b>Sewaan</b><span>Satu bayaran bulanan termasuk penyelenggaraan.</span></div>
+  </div>
+  <div class="more">
+    <p><b>Nak lihat semua produk & brosur rasmi?</b><span>Katalog penuh: 44 produk Toshiba dan 25 penyelesaian perisian.</span></p>
+    <a class="pill pill-line" href="katalog.html">Lihat katalog penuh →</a>
   </div>
 </div></section>
 
-<!-- ============ CATALOGUE ============ -->
-<section id="catalogue" style="padding-top:0"><div class="wrap">
-  <div class="k">Full range</div>
-  <h2 class="h">All products & brochures</h2>
-  <p class="sub">Every product has its official brochure. Add the ones you're interested in to your enquiry list and send it to us in one go.</p>
-  <div class="filters" id="filters"></div>
-  <div class="count" id="count"></div>
-  <div class="grid" id="grid"></div>
-</div></section>
-
-<!-- ============ SOFTWARE ============ -->
-<section id="software" style="padding-top:0"><div class="wrap">
-  <div class="k">Software & services</div>
-  <h2 class="h">Digitalise how your office works</h2>
-  <p class="sub">Software and services that go with the hardware: digital records, automation, tracking and managed IT.</p>
-  <div class="sols" id="sols"></div>
-</div></section>
-
-<!-- ============ WHY ============ -->
-<section style="padding-top:0"><div class="wrap">
-  <div class="k">What you can count on</div>
-  <h2 class="h">Why agencies choose Toshiba</h2>
-  <div class="why">
-    <div><span style="font-size:24px">🔒</span><h3>Security built in</h3><p>e-STUDIO models offer encrypted storage, Trusted Platform Module, anti-malware and user authentication.</p></div>
-    <div><span style="font-size:24px">📊</span><h3>Accountable spending</h3><p>Department codes, quotas and reports show exactly who prints what, which helps with budget and audit.</p></div>
-    <div><span style="font-size:24px">🛠️</span><h3>Service you can reach</h3><p>Branches and a service network nationwide, with remote monitoring and the T-HUB app for service requests.</p></div>
-    <div><span style="font-size:24px">🤝</span><h3>One partner, end to end</h3><p>Hardware, software, installation, training and after-sales from a single accountable vendor.</p></div>
-  </div>
-</div></section>
-
-<!-- ============ HOW TO BUY ============ -->
-<section id="how" style="padding-top:0"><div class="wrap">
-  <div class="k">Simple process</div>
-  <h2 class="h">How we work with your agency</h2>
-  <div class="steps">
-    <div class="step"><h4>Free assessment</h4><p>We visit and review your current printing, filing and counter workflows.</p></div>
-    <div class="step"><h4>Recommendation</h4><p>A right-sized proposal, not an oversized one, with a live demo.</p></div>
-    <div class="step"><h4>Quotation</h4><p>Prepared to fit your procurement route and budget.</p></div>
-    <div class="step"><h4>Install & train</h4><p>Setup, configuration and hands-on training for your staff.</p></div>
-    <div class="step"><h4>After-sales</h4><p>Maintenance, consumables and service-call tracking.</p></div>
-  </div>
-  <div class="buyways"><span>✓ Direct purchase</span><span>✓ Sebut harga</span><span>✓ Tender</span><span>✓ Rental / managed print</span></div>
-</div></section>
-
-<!-- ============ FAQ ============ -->
-<section id="faq" style="padding-top:0"><div class="wrap">
-  <div class="k">Common questions</div>
-  <h2 class="h">Questions agencies usually ask</h2>
-  <div class="faq">
-    <details><summary>Can you quote for sebut harga or tender requirements?</summary><p>Yes. Share the specification or the ePerolehan listing and we'll prepare a quotation and supporting brochures for the models that meet it.</p></details>
-    <details><summary>Do we have to buy, or can we rent?</summary><p>Both are possible. Many offices prefer rental or managed print so maintenance and consumables come in one predictable monthly cost. We'll explain both options during the assessment.</p></details>
-    <details><summary>How do you keep confidential documents safe?</summary><p>Supported e-STUDIO models offer encrypted SSD/HDD, Trusted Platform Module, anti-malware, user authentication and secure print release, so documents only print when the right officer is at the machine.</p></details>
-    <details><summary>Can we track printing cost by department?</summary><p>Yes. Print management software records usage by user, department or project, with quotas and reports for budget control.</p></details>
-    <details><summary>Can you help digitalise our old physical files?</summary><p>Yes. Our scanning service (BPO) digitises existing records, and EDMS lets officers store, search and share them securely afterwards.</p></details>
-    <details><summary>Will your products work with our existing systems?</summary><p>Most products support standard networks and operating systems, and many integrate with existing software. We'll check compatibility during the assessment.</p></details>
-  </div>
-</div></section>
-
-<!-- ============ CONTACT ============ -->
-<section id="contact" style="padding-top:0"><div class="wrap">
+<!-- 5. CONTACT -->
+<section id="hubungi" style="padding-top:0"><div class="wrap">
   <div class="contact">
     <div>
-      <h2>Let's look at your office together, at no cost.</h2>
-      <p>Book a free site assessment or a product demo. We'll review how your office prints, files and serves the public, then recommend what will actually help.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px">
-        <a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp me</a>
-        <a class="pill pill-ghost js-mail" href="#">✉ Email me</a>
+      <h2>Lawatan & penilaian pejabat, percuma.</h2>
+      <p>Saya akan lawat, lihat cara pejabat anda mencetak, menyimpan fail dan melayan orang awam, kemudian cadangkan hanya apa yang benar-benar membantu.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+        <a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp saya</a>
+        <a class="pill pill-ghost js-mail" href="#">✉ E-mel</a>
       </div>
     </div>
     <div class="rep">
-      <div class="lbl">Your account manager</div>
+      <div class="lbl">Pengurus akaun anda</div>
       <div class="nm" data-cfg="name"></div>
       <div class="rl" data-cfg="role"></div>
       <div class="rows">
@@ -381,288 +216,119 @@ footer .note{font-size:12px;opacity:.6;max-width:640px}
       </div>
       <div class="vendor">
         <div><b>Toshiba Tec Malaysia Sdn. Bhd.</b></div>
-        <div>MOF registration: <span data-cfg="mof"></span></div>
-        <div>Hotline +603 5568 7699 · Toll free 1800 28 2000</div>
-        <div>www.toshibatec.com.my</div>
+        <div>No. pendaftaran MOF: <span data-cfg="mof"></span></div>
+        <div>Talian bebas tol 1800 28 2000 · www.toshibatec.com.my</div>
       </div>
     </div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <div>© Toshiba Tec Malaysia Sdn. Bhd. · Prepared by <span data-cfg="name"></span></div>
-  <div class="note">Specifications and brochures are from toshibatec.com.my and may change without notice. Product images load from the Toshiba website; open this page in a web browser with internet access to see them.</div>
+  <div>© Toshiba Tec Malaysia Sdn. Bhd. · Disediakan oleh <span data-cfg="name" style="opacity:1"></span></div>
+  <span>Spesifikasi dan brosur daripada toshibatec.com.my, tertakluk kepada perubahan.</span>
 </div></footer>
 
 <a class="fab js-wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
-<!-- Enquiry drawer -->
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Enquiry list">
-  <header><h3>My enquiry list</h3><button class="x" id="closeList" aria-label="Close">×</button></header>
-  <div class="items" id="items"></div>
-  <div class="form">
-    <input id="fAgency" placeholder="Agency / department name">
-    <input id="fName" placeholder="Your name & position">
-    <textarea id="fNote" rows="2" placeholder="Anything we should know? (quantity, location, timeline)"></textarea>
-    <div class="send">
-      <button class="pill pill-wa" id="sendWa" style="justify-content:center">💬 WhatsApp</button>
-      <button class="pill pill-red" id="sendMail" style="justify-content:center">✉ Email</button>
-    </div>
-  </div>
-</aside>
-<div class="toast" id="toast"></div>
-
 <script>
-/* ==================== EDIT YOUR DETAILS HERE ==================== */
+/* ============ EDIT BUTIRAN ANDA DI SINI ============ */
 const CONFIG = {
   name:   "Shaziq Idham",
-  role:   "Business Development Executive, Government Accounts",
+  role:   "Business Development Executive, Akaun Kerajaan",
   phone:  "017-771 7206",
-  wa:     "60177717206",           // WhatsApp number in international format, no + or spaces
+  wa:     "60177717206",
   email:  "shaziq@toshibatec.com.my",
-  branch: "Toshiba Tec Malaysia, Johor Bahru Branch",
+  branch: "Toshiba Tec Malaysia, Cawangan Johor Bahru",
   mof:    "357-00037495"
 };
-/* ================================================================ */
 
+/* ============ AGENSI (tambah / ubah di sini) ============
+   mono = singkatan pada kotak, what = apa yang dibekalkan */
+const CLIENTS = [
+  {mono:"MBJB",  n:"Majlis Bandaraya Johor Bahru", t:"Pihak Berkuasa Tempatan", what:"Penghancur kertas industri"},
+  {mono:"MHK",   n:"Mahkamah",                     t:"Badan kehakiman",         what:"Sistem kehadiran"},
+  {mono:"MZM",   n:"Muzium",                       t:"Pelancongan & warisan",   what:"Digital signage"},
+  {mono:"MOTAC", n:"MOTAC",                        t:"Kementerian",             what:"Penyelesaian pejabat Toshiba"},
+  {mono:"DBD",   n:"DBD Mersing",                  t:"Agensi daerah",           what:"Penyelesaian pejabat Toshiba"}
+];
+
+/* ============ PRODUK ============
+   img = gambar dari toshibatec.com.my (kosong = guna ikon), pdf = brosur rasmi (kosong = minta melalui WhatsApp) */
 const U = "https://www.toshibatec.com.my/wp-content/uploads/";
-const P = "https://www.toshibatec.com.my/product/";
-const S = "https://www.toshibatec.com.my/solution/";
+const PROD = {
+  mfpStd:   {n:"e-STUDIO 3025AC / 3525AC / 4525AC", role:"Pencetak pejabat", img:"2025/07/p3.webp", pdf:"2024/05/e-STUDIO3025AC_3525AC_4525AC-Series_TTMS.pdf", d:"Cetak, imbas, salin. Setiap pengguna log masuk, jadi kos boleh dijejak."},
+  mfpMono:  {n:"e-STUDIO 3028A / 3528A / 4528A", role:"Pencetak selamat", img:"2025/07/p1.webp", pdf:"2024/05/e-STUDIO3028A_3528A_4528A-Series_TTMS.pdf", d:"Storan disulitkan, TPM dan anti-malware. Dokumen dicetak hanya bila pegawai di mesin."},
+  mfpFast:  {n:"e-STUDIO 5528A / 6528A", role:"Imbasan pantas", img:"2025/07/p71.webp", pdf:"2024/05/e-STUDIO5528A_6528A-Series_TTMS.pdf", d:"Imbas fail tebal dengan pantas (240 muka/minit) terus ke format digital."},
+  pms:      {n:"Sistem Pengurusan Cetakan", role:"Perisian", ico:"📊", link:"https://www.toshibatec.com.my/solution/toshiba-print-management-system/", d:"Laporan penggunaan ikut jabatan atau pengguna, dengan had kuota."},
+  bpo:      {n:"Perkhidmatan Imbasan (BPO)", role:"Perkhidmatan", ico:"📦", link:"https://www.toshibatec.com.my/solution/business-process-outsourcing/", d:"Pasukan kami digitalkan fail lama anda tanpa ganggu kerja harian."},
+  edms:     {n:"Sistem Pengurusan Dokumen (EDMS)", role:"Perisian", ico:"🗂️", link:"https://www.toshibatec.com.my/solution/electronic-document-management-system-edms/", d:"Cari rekod dalam beberapa saat, bukan beberapa jam di bilik fail."},
+  ats:      {n:"Sistem Penjejakan Aset", role:"Perisian", ico:"🏷️", link:"https://www.toshibatec.com.my/solution/asset-tracking-system/", d:"Daftar, tag dan sahkan aset alih dengan imbasan."},
+  bx410t:   {n:"Toshiba BX410T", role:"Pencetak tag aset", img:"2025/08/BX410T_F.webp", pdf:"2025/08/Toshiba-BX410T_TTMS.pdf", d:"Cetak label kod bar & RFID yang tahan lama untuk aset."},
+  bfp3d:    {n:"Toshiba B-FP3D", role:"Pencetak mudah alih", img:"2025/08/Toshiba-B-FP3D2.webp", pdf:"2020/01/Toshiba-B-FP3D_TTMS.pdf", d:"Untuk pemeriksaan stor dan label di lapangan."},
+  shredder: {n:"Penghancur Kertas Industri", role:"Pelupusan dokumen", ico:"🗑️", d:"Lupuskan dokumen sulit dalam jumlah besar dengan selamat."},
+  cctv:     {n:"Sistem CCTV", role:"Keselamatan premis", ico:"📹", d:"Pantau premis dan bilik rekod, dengan pilihan beli atau sewa."},
+  kiosk:    {n:"Pro-X Hybrid Kiosk", role:"Kios layan diri", img:"2025/08/Pro-X-Hybrid-Kiosk.webp", pdf:"2024/11/Toshiba-Pro-X-Hybrid-Kiosk_TTMS.pdf", d:"Orang awam bayar atau daftar sendiri, jadi barisan di kaunter lebih pendek."},
+  signage:  {n:"Digital Signage", role:"Paparan maklumat", img:"2026/09/Toshiba-Digital-Signage.webp", pdf:"2018/05/Digital-Signage_UHM4324H_TTMS.pdf", d:"Papar notis dan maklumat giliran dengan jelas."},
+  attend:   {n:"Sistem Kehadiran", role:"Kehadiran staf", ico:"🕘", d:"Rekod kehadiran automatik, laporan sedia untuk HR."}
+};
 
-/* group: mfp-compact | mfp-standard | mfp-enterprise | labels | mobile | counter | display
-   f = who it's for (customer language), b = benefits (customer language)  */
-const PRODUCTS = [
- // ---- MFP Enterprise
- {id:"es7527ac",n:"e-STUDIO 6526AC / 7527AC",g:"mfp-enterprise",badge:"A3 Colour",img:"2025/07/p8.webp",s:"e-studio-6526ac-7527ac",pdf:"2024/05/e-STUDIO6526AC_7527AC_TTMS.pdf",f:"HQ & central print rooms",b:["Up to 75 ppm colour / 85 ppm mono","Scans thick files fast (240 ipm)","Booklets & stapling in-house"]},
- {id:"es9029a",n:"e-STUDIO 6529A / 7529A / 9029A",g:"mfp-enterprise",badge:"A3 Mono",img:"2025/07/p8.webp",s:"e-studio-6529a-7529a-9029a",pdf:"2024/05/e-STUDIO6529A_7529A_9029A_TTMS.pdf",f:"High-volume reports & circulars",b:["Built for very high monthly volume","Up to 8,020 sheets loaded","Fast dual-scan feeder"]},
- {id:"es6525ac",n:"e-STUDIO 5525AC / 6525AC",g:"mfp-enterprise",badge:"A3 Colour",img:"2025/07/p71.webp",s:"e-studio-5525ac-6525ac",pdf:"2024/05/e-STUDIO5525AC_6525AC-Series_TTMS.pdf",f:"Large departments",b:["High-quality colour for big teams","Up to 5,200 sheets loaded","Stapling & saddle-stitch"]},
- {id:"es6528a",n:"e-STUDIO 5528A / 6528A",g:"mfp-enterprise",badge:"A3 Mono",img:"2025/07/p71.webp",s:"e-studio-5528a-6528a",pdf:"2024/05/e-STUDIO5528A_6528A-Series_TTMS.pdf",f:"Registry & administration",b:["55 / 65 pages per minute","Fast scanning for digital records","Up to 5,200 sheets loaded"]},
- // ---- MFP Standard
- {id:"es4525ac",n:"e-STUDIO 3025AC / 3525AC / 4525AC",g:"mfp-standard",badge:"A3 Colour",img:"2025/07/p3.webp",s:"e-studio-3025ac-3525ac-4525ac",pdf:"2024/05/e-STUDIO3025AC_3525AC_4525AC-Series_TTMS.pdf",f:"District & branch offices",b:["30–45 pages per minute","Encrypted storage for official files","Wi-Fi & mobile printing options"]},
- {id:"es4528a",n:"e-STUDIO 3028A / 3528A / 4528A",g:"mfp-standard",badge:"A3 Mono",img:"2025/07/p1.webp",s:"e-studio-3028a-3528a-4528a",pdf:"2024/05/e-STUDIO3028A_3528A_4528A-Series_TTMS.pdf",f:"General office printing",b:["Encrypted SSD + TPM + anti-malware","Officer login before printing","Up to 5,200 sheets loaded"]},
- // ---- MFP Compact
- {id:"es2521ac",n:"e-STUDIO 2021AC / 2521AC",g:"mfp-compact",badge:"A3 Colour",img:"2025/07/p1.webp",s:"e-studio-2021ac-2521ac",pdf:"2024/05/e-STUDIO2021_2521AC_TTMS.pdf",f:"Small units needing colour A3",b:["20 / 25 pages per minute","Affordable entry to colour A3","Easy tablet-style panel"]},
- {id:"es2528a",n:"e-STUDIO 2528A",g:"mfp-compact",badge:"A3 Mono",img:"2025/07/p2.webp",s:"e-studio-2528a",pdf:"2024/05/e-STUDIO2528A-Series_TTMS.pdf",f:"Counters & small departments",b:["Up to 25 pages per minute","Fast scanning built in","Compact footprint"]},
- {id:"es401ac",n:"e-STUDIO 331AC / 401AC",g:"mfp-compact",badge:"A4 Colour",img:"2026/01/1_eS401AC_F_Website.webp",s:"e-studio-331ac-401ac",pdf:"2026/01/e-STUDIO331AC_401AC_TTMS.pdf",f:"Meeting rooms & tight spaces",b:["Up to 40 pages per minute","Secure HDD","Cloud connectivity"]},
- {id:"es2822af",n:"e-STUDIO 2822AF",g:"mfp-compact",badge:"A3 in A4 size",img:"2025/06/eSTUDIO2822AF4.jpg",s:"e-studio-2822af",pdf:"2024/05/e-STUDIO2822AF_TTMS.pdf",f:"Front desks needing occasional A3",b:["A3 output from an A4-size body","28 pages per minute","Department code control"]},
- {id:"es2829a",n:"e-STUDIO 2329A / 2829A",g:"mfp-compact",badge:"A3 Mono",img:"2025/08/2923a.webp",s:"e-studio-2329a-2829a",pdf:"2024/05/e-STUDIO2329A_2829A_TTMS.pdf",f:"Budget-friendly A3 for units",b:["Print, scan, copy & fax","23 / 28 pages per minute","Simple to use"]},
- {id:"es409s",n:"e-STUDIO 409S",g:"mfp-compact",badge:"A4 Mono MFP",img:"2025/07/p6.webp",s:"e-studio-409s",pdf:"2023/03/e-STUDIO409SP_Brochure_TTMS.pdf",f:"Officer desk-side",b:["40 pages per minute","Scan & copy at your desk","Low energy use"]},
- {id:"es409p",n:"e-STUDIO 409P",g:"mfp-compact",badge:"A4 Mono Printer",img:"2025/08/e-STUDIO-409P.webp",s:"e-studio-409p",pdf:"2024/05/e-STUDIO409S_P_TTMS.pdf",f:"Personal printing",b:["40 pages per minute","Ready in about 9 seconds","Network ready"]},
- {id:"es339cs",n:"e-STUDIO 339CS",g:"mfp-compact",badge:"A4 Colour",img:"2025/07/p4c.webp",s:"e-studio-339cs",pdf:"2024/05/e-STUDIO339CS_TTMS.pdf",f:"Small teams needing colour",b:["33 pages per minute","Trusted Platform Module security","Wireless printing"]},
- // ---- Labels
- {id:"bx410t",n:"Toshiba BX410T",g:"labels",badge:"4\" · RFID",img:"2025/08/BX410T_F.webp",s:"toshiba-bx410t",pdf:"2025/08/Toshiba-BX410T_TTMS.pdf",f:"Asset tags with RFID",b:["Prints & encodes RFID asset tags","Up to 14 ips","Cloud-managed"]},
- {id:"ba410t",n:"Toshiba BA410T",g:"labels",badge:"4\" · RFID",img:"2025/08/Toshiba-BA410T2.webp",s:"toshiba-ba410t",pdf:"2020/01/Toshiba-BA400-Series_TTMS.pdf",f:"Asset & store labelling",b:["Durable metal frame","RFID ready","Wi-Fi / Bluetooth / NFC options"]},
- {id:"ba420t",n:"Toshiba BA420T",g:"labels",badge:"4\" · Compact",img:"2025/08/Toshiba-BA420T2.webp",s:"toshiba-ba420t",pdf:"2020/01/Toshiba-BA400-Series_TTMS-1.pdf",f:"Labelling in small spaces",b:["Lightweight & compact","RFID ready","Up to 8 ips"]},
- {id:"bv400t",n:"Toshiba BV400T Series",g:"labels",badge:"Desktop",img:"2025/08/Toshiba-BV400D-Series.webp",s:"toshiba-bv400t-series",pdf:"2023/12/Toshiba-BV400T-Series_TTMS.pdf",f:"Long-lasting asset labels",b:["Thermal transfer for durable labels","RFID ready","Fits on any desk"]},
- {id:"bv400d",n:"Toshiba BV400D Series",g:"labels",badge:"Desktop",img:"2025/08/Toshiba-BV400D-Series.webp",s:"toshiba-bv400d-series",pdf:"2021/02/Toshiba-BV400D-Series_TTMS.pdf",f:"File, specimen & visitor labels",b:["Simple direct-thermal printing","Compact desktop design","Wi-Fi / Bluetooth options"]},
- {id:"bx420t",n:"Toshiba BX420T",g:"labels",badge:"4\" Industrial",img:"2025/11/BX420T-new.webp",s:"toshiba-bx420t",pdf:"2025/11/Toshiba-BX420T_TTMS.pdf",f:"Upgrading old label printers",b:["Up to 12 ips","Colour LCD, easy to operate","Cloud-ready"]},
- {id:"bx430t",n:"Toshiba BX430T",g:"labels",badge:"600 dpi",img:"2025/11/BX430T-new.webp",s:"toshiba-bx430t",pdf:"2025/11/Toshiba-BX430T_TTMS.pdf",f:"Tiny labels for labs & hospitals",b:["Ultra-sharp 600 dpi","Labels from 3 mm","Cloud-ready"]},
- {id:"bx610t",n:"Toshiba BX610T",g:"labels",badge:"6\" Industrial",img:"2025/12/bx610t-f.webp",s:"toshiba-bx610t",pdf:"2025/12/Toshiba-BX610T_TTMS.pdf",f:"Stores & warehouses",b:["Wide labels up to 162 mm","Up to 12 ips","Dual-core, reliable"]},
- {id:"bx620t",n:"Toshiba BX620T",g:"labels",badge:"6\" Industrial",img:"2025/12/BX620T_F.webp",s:"toshiba-bx620t",pdf:"2025/12/Toshiba-BX620T_TTMS.pdf",f:"High-volume labelling",b:["Up to 12 ips","Wide-format labels","Cloud-ready management"]},
- {id:"bx820t",n:"Toshiba BX820T",g:"labels",badge:"8\" Industrial",img:"2026/09/TTMS_BX820T_scaled-2.webp",s:"toshiba-bx820t",pdf:"2026/09/Toshiba-BX820T_TTMS.pdf",f:"Pallet & carton labels (GLC logistics)",b:["Extra-wide 216 mm labels","300 dpi","Wi-Fi 6 & Bluetooth options"]},
- {id:"bc400p",n:"Toshiba BC400P",g:"labels",badge:"Colour Inkjet",img:"2025/08/Toshiba-BC400P5.webp",s:"toshiba-bc400p",pdf:"2023/08/Toshiba-BC400P_TTMS.pdf",f:"Colour product labels (GLCs)",b:["Full-colour labels in-house","Long-lasting pigment ink","Up to 12 ips"]},
- {id:"bsx8t",n:"Toshiba B-SX8T",g:"labels",badge:"8\" Heavy-duty",img:"2025/08/Toshiba-B-SX8T.webp",s:"toshiba-b-sx8t",pdf:"2020/01/Toshiba-B-SX8T_TTMS.pdf",f:"Tough industrial sites",b:["Heavy-duty steel body","Wide 213 mm labels","Low running cost"]},
- {id:"bex6t1",n:"Toshiba B-EX6T1",g:"labels",badge:"6\" · RFID",img:"2025/08/Toshiba-B-EX6T11a.webp",s:"toshiba-b-ex6t1",pdf:"2020/01/Toshiba-B-EX6T1_TTMS.pdf",f:"Wide RFID labels",b:["RFID ready","Ribbon-save mode cuts cost","Up to 12 ips"]},
- {id:"bex6t3",n:"Toshiba B-EX6T3",g:"labels",badge:"6\" Industrial",img:"2025/08/Toshiba-B-EX6T1.webp",s:"toshiba-b-ex6t3",pdf:"2020/01/Toshiba-B-EX6T3_TTMS.pdf",f:"Wide-label printing",b:["Up to 12 ips","Flat-head technology","Low running cost"]},
- {id:"b852",n:"Toshiba B-852",g:"labels",badge:"8\" Mid-range",img:"2025/08/Toshiba-B-852.webp",s:"toshiba-b-852",pdf:"2020/01/Toshiba-B-852_TTMS.pdf",f:"Large labels on a budget",b:["216 mm wide labels","300 dpi","Network management"]},
- {id:"aplex4",n:"APLEX4 Print & Apply",g:"labels",badge:"Automation",img:"2025/08/APLEX4.webp",s:"aplex4",pdf:"2022/05/APLEX4-Brochure_TTMS-1.pdf",f:"Automatic carton labelling",b:["Prints & applies labels automatically","Adjusts to carton height","For production & logistics lines"]},
- // ---- Mobile
- {id:"bfp3d",n:"Toshiba B-FP3D",g:"mobile",badge:"3\" Mobile",img:"2025/08/Toshiba-B-FP3D2.webp",s:"toshiba-b-fp3d",pdf:"2020/01/Toshiba-B-FP3D_TTMS.pdf",f:"Enforcement notices & compounds",b:["Print on the spot in the field","Compact & rugged","Bluetooth / Wi-Fi"]},
- {id:"bfp2d",n:"Toshiba B-FP2D",g:"mobile",badge:"2\" Mobile",img:"2025/08/Toshiba-B-FP2D.webp",s:"b-fp2d",pdf:"2021/04/Toshiba-B-FP2D_TTMS.pdf",f:"Field receipts for officers",b:["Pocket-size & rugged","Fast 6 ips printing","Bluetooth / Wi-Fi / NFC"]},
- {id:"bep4dl",n:"Toshiba B-EP4DL",g:"mobile",badge:"4\" Mobile",img:"2025/08/Toshiba-B-EP4DL2.webp",s:"toshiba-b-ep4dl",pdf:"2020/01/Toshiba-B-EP2D_EP4D_TTMS.pdf",f:"Mobile stock-take & labels",b:["4-inch wide labels on the move","Bluetooth & Wi-Fi","Backlit screen & keypad"]},
- // ---- Counter
- {id:"tcx900",n:"Toshiba TCx® 900",g:"counter",badge:"POS",img:"2025/08/Toshiba-TCx®-9002.webp",s:"toshiba-tcx-900",pdf:"2025/06/Toshiba-TCx-900_TTMS.pdf",f:"Main payment counters",b:["Powerful & modular","Very small counter footprint","Built for all-day use"]},
- {id:"tcx820",n:"Toshiba TCx® 820",g:"counter",badge:"POS",img:"2025/08/TCx-820_image-2.webp",s:"toshiba-tcx-820",pdf:"2025/08/Toshiba-TCx-820_TTMS.pdf",f:"Fast checkout counters",b:["All-in-one touch terminal","Screens up to 23.8\"","Data protection with RAID"]},
- {id:"tcx810",n:"Toshiba TCx® 810",g:"counter",badge:"POS",img:"2025/08/Toshiba-TCx®-810.webp",s:"toshiba-tcx-810",pdf:"2025/06/Toshiba-TCx-810_TTMS.pdf",f:"Counters & cafeterias",b:["All-in-one touch terminal","15\"–19.5\" screens","Reliable daily operation"]},
- {id:"tcx300",n:"Toshiba TCx® 300",g:"counter",badge:"POS",img:"2025/08/Toshiba-TCx300-Series.webp",s:"toshiba-tcx300-series",pdf:"2025/06/Toshiba-TCx-300_TTMS.pdf",f:"Small counters",b:["Compact footprint","Strong performance","Up to 64 GB memory"]},
- {id:"prox",n:"Pro-X Hybrid Kiosk",g:"counter",badge:"Self-service",img:"2025/08/Pro-X-Hybrid-Kiosk.webp",s:"pro-x-hybrid-kiosk",pdf:"2024/11/Toshiba-Pro-X-Hybrid-Kiosk_TTMS.pdf",f:"Self-service payment & registration",b:["Shorter queues at counters","Touch-screen self-service","Flexible compact design"]},
- {id:"tcxss",n:"TCx® Single Station Printer",g:"counter",badge:"Receipt",img:"2025/08/Untitled-design-21.webp",s:"tcx-single-station-printer",pdf:"2025/08/Toshiba-TCx-Single-Station-Printer_TTMS.pdf",f:"Official payment receipts",b:["Fast 16 ips receipts","58 / 80 mm paper","Built to last"]},
- {id:"tcxds",n:"TCx® Dual Station Printer",g:"counter",badge:"Receipt + slip",img:"2025/06/TCxDSP-main.png",s:"tcx-dual-station-printer",pdf:"2024/11/Toshiba-TCx-Dual-Station-Printer_TTMS.pdf",f:"Receipts plus slips & forms",b:["Receipt and document printing","Fast 16 ips","Powered USB"]},
- {id:"hsp",n:"Toshiba HSP Series Printer",g:"counter",badge:"Receipt",img:"2025/08/Untitled-design-22.webp",s:"toshiba-hsp-series-printer",pdf:"2025/08/Toshiba-HSP-Printer_TTMS.pdf",f:"Busy counters & food outlets",b:["Splash-resistant","Energy efficient","Fast servicing"]},
- {id:"linerless",n:"Toshiba Linerless Printer",g:"counter",badge:"Receipt / label",img:"2025/08/Untitled-design-26.webp",s:"toshiba-linerless-printer",pdf:"2025/08/Toshiba-Linerless-Printer_TTMS.pdf",f:"Queue tickets & labels",b:["Less paper waste","Receipts, labels & linerless","Remote management"]},
- // ---- Display
- {id:"tscreen",n:"T-Screen Multi-Interactive Screen",g:"display",badge:"Interactive",img:"2025/08/Toshiba-T-Screen-Multi-Interactive-Screen.webp",s:"toshiba-t-screen-multi-interactive-screen",pdf:"2026/06/TSCREEN2026_TTMS_LR.pdf",f:"Meeting rooms & bilik gerakan",b:["Whiteboard + display in one","Built-in 48 MP camera & 8 mics","Up to 40 touch points"]},
- {id:"signage",n:"Digital Signage 43\" UHD",g:"display",badge:"Signage",img:"2026/09/Toshiba-Digital-Signage.webp",s:"digital-signage",pdf:"2018/05/Digital-Signage_UHM4324H_TTMS.pdf",f:"Lobby notices & queue info",b:["Sharp 4K screen","Update notices digitally","4x HDMI inputs"]}
+/* ============ 5 MASALAH ============ */
+const PAINS = [
+  {id:"kos", ico:"💸", t:"Kos cetakan tinggi, tiada kawalan",
+   before:["Tak tahu unit mana cetak berapa banyak","Mesin lama kerap rosak, kos baiki tinggi","Susah jawab soalan audit pasal bajet"],
+   after:["Laporan penggunaan ikut jabatan & pegawai","Kuota dan cetakan selamat kurangkan pembaziran","Satu kontrak penyelenggaraan untuk semua mesin"],
+   p:["mfpStd","pms","mfpMono"]},
+  {id:"fail", ico:"🗄️", t:"Fail bertimbun, susah dicari",
+   before:["Pegawai habis masa cari fail di bilik rekod","Fail hilang antara jabatan","Ruang simpanan makin sempit"],
+   after:["Fail lama didigitalkan oleh pasukan kami","Rekod boleh dicari dalam beberapa saat","Pergerakan fail dijejak"],
+   p:["bpo","edms","mfpFast"]},
+  {id:"aset", ico:"🏷️", t:"Pemeriksaan aset & stor makan masa",
+   before:["Pelekat aset pudar atau hilang","Verifikasi tahunan ambil berminggu-minggu","Teguran audit berulang"],
+   after:["Tag kod bar / RFID tahan lama","Verifikasi dengan imbasan, siap dalam beberapa jam","Status dan lokasi aset sentiasa terkini"],
+   p:["ats","bx410t","bfp3d"]},
+  {id:"selamat", ico:"🔐", t:"Keselamatan dokumen & premis",
+   before:["Dokumen sulit tertinggal di pencetak","Kertas sulit dibuang tanpa dihancurkan","Bilik rekod dan premis tidak dipantau"],
+   after:["Dokumen hanya dicetak bila pegawai log masuk","Pelupusan selamat dengan penghancur industri","Pemantauan CCTV 24 jam"],
+   p:["mfpMono","shredder","cctv"]},
+  {id:"kaunter", ico:"🧾", t:"Kaunter sesak & urusan manual",
+   before:["Barisan panjang di kaunter","Orang awam tak tahu nak ke mana","Kehadiran staf direkod secara manual"],
+   after:["Kios layan diri kurangkan beban kaunter","Digital signage pandu pelawat","Kehadiran direkod automatik"],
+   p:["kiosk","signage","attend"]}
 ];
 
-const SOFT = [
- {id:"edms",n:"Electronic Document Management (EDMS)",s:"electronic-document-management-system-edms",ico:"🗂️",d:"Store, search and share records digitally instead of in filing rooms.",f:"Records & registry units"},
- {id:"bpo",n:"Scanning Service (BPO)",s:"business-process-outsourcing",ico:"📦",d:"We digitise your backlog of physical files without disrupting daily work.",f:"Offices with years of paper files"},
- {id:"dts",n:"Document Tracking System",s:"document-tracking-system",ico:"📍",d:"Know where every file is and who has it.",f:"File movement between officers"},
- {id:"ats",n:"Asset Tracking System",s:"asset-tracking-system",ico:"🏷️",d:"Register, tag and verify movable assets with real-time visibility.",f:"Asset & audit units"},
- {id:"its",n:"Inventory Tracking System",s:"inventory-tracking-system",ico:"📋",d:"Real-time stock visibility with fewer errors.",f:"Stores & consumables"},
- {id:"sdt",n:"Swift Data Take",s:"swift-data-take",ico:"⚡",d:"Faster, more accurate stock-take using data capture.",f:"Annual stock verification"},
- {id:"vrs",n:"Visitor Registration System",s:"visitors-registration-system",ico:"🪪",d:"Secure digital check-in for visitors.",f:"Building security & front desk"},
- {id:"wfa",n:"Workflow Automation",s:"workflow-automation",ico:"🔁",d:"Digital forms and approvals with drag-and-drop workflows.",f:"Applications & approvals"},
- {id:"rpa",n:"Robotic Process Automation (RPA)",s:"robotic-process-automation-rpa",ico:"🤖",d:"No-code bots handle repetitive data entry and reports.",f:"Admin & finance teams"},
- {id:"hrms",n:"HR Management System (HRMS)",s:"hr-system",ico:"👥",d:"Recruitment, attendance, claims and appraisal in one place.",f:"GLCs & statutory bodies"},
- {id:"bizmap",n:"BizMap ERP",s:"bizmap-solutions",ico:"🧭",d:"Centralised operations with real-time insight.",f:"GLC operations & finance"},
- {id:"sms",n:"Stock Management System",s:"stock-management-system",ico:"📦",d:"Full control of inventory with real-time tracking.",f:"Store & supply units"},
- {id:"cms",n:"Contractor Management System",s:"contractor-management-system",ico:"🦺",d:"Manage contractor compliance from application to completion.",f:"Facilities & projects"},
- {id:"mit",n:"Managed IT Services",s:"managed-it",ico:"🖥️",d:"Proactive IT support and secure infrastructure.",f:"Lean in-house IT teams"},
- {id:"pms",n:"Print Management System",s:"toshiba-print-management-system",ico:"📊",d:"Track and cap printing cost by user or department.",f:"Budget & admin officers"},
- {id:"esuite",n:"e-Suite Secure Print",s:"e-suite",ico:"🔐",d:"Documents only print when the officer logs in at the machine.",f:"Confidential documents"},
- {id:"global",n:"e-BRIDGE Global Print",s:"e-bridge-global-print",ico:"☁️",d:"Print securely from any office location.",f:"Multi-site agencies"},
- {id:"capture",n:"e-BRIDGE Capture & Store",s:"e-bridge-capture-store",ico:"🔎",d:"Turn paper into searchable PDFs automatically.",f:"Scan-to-archive"},
- {id:"qr",n:"e-Scan QR",s:"e-scan-qr",ico:"🔳",d:"Scan, auto-name and file documents using QR codes.",f:"Forms & applications"},
- {id:"cloud",n:"e-BRIDGE Cloud Connect",s:"e-bridge-cloud-connect",ico:"🛰️",d:"Remote monitoring so issues are fixed before you notice.",f:"Maximum uptime"},
- {id:"dash",n:"MFP Dashboard",s:"mfp-dashboard",ico:"📈",d:"See the status of every printer in one view.",f:"Admin & IT officers"},
- {id:"thub",n:"T-HUB App",s:"t-hub",ico:"📱",d:"Request service and supplies from your phone.",f:"Every user"},
- {id:"topup",n:"Top Up & Print",s:"top-up-print",ico:"💳",d:"Prepaid printing credits for public or student use.",f:"Universities & libraries"},
- {id:"apps",n:"App Showcase",s:"app-showcase",ico:"🧩",d:"Ready-made apps that run on e-STUDIO printers.",f:"Custom workflows"},
- {id:"retail",n:"Retail Solution",s:"toshiba-retail-solution",ico:"🛍️",d:"Modern retail systems for outlets and attractions.",f:"GLC retail & tourism"}
-];
-
-const CHALLENGES = [
- {id:"cost",ico:"💸",t:"Printing costs keep going up and nobody knows who prints what",bm:"Kos cetakan tinggi, tiada kawalan",
-  pain:["No visibility of printing by unit or officer","Old machines break down and cost more to maintain","Budget questions during audit are hard to answer"],
-  gain:["Usage reports by department, user or project","Quotas and secure release stop waste","Right-sized fleet with one maintenance contract"],
-  p:["es4525ac","es4528a","es6528a"],sw:["pms","dash","cloud"]},
- {id:"files",ico:"🗄️",t:"Too many physical files: slow to find and running out of space",bm:"Fail fizikal bertimbun, sukar dicari",
-  pain:["Officers spend time searching filing rooms","Files go missing between departments","Storage space keeps shrinking"],
-  gain:["Backlog digitised by our scanning team","Records searchable in seconds with EDMS","Every file movement tracked"],
-  p:["es6528a","es4528a","es2528a"],sw:["bpo","edms","dts","capture","qr"]},
- {id:"assets",ico:"🏷️",t:"Asset and store verification takes too long and audit findings repeat",bm:"Pemeriksaan aset & stor mengambil masa",
-  pain:["Manual registers and stickers fade or go missing","Annual verification takes weeks","Hard to locate assets across buildings"],
-  gain:["Durable barcode / RFID asset tags","Scan-based verification in hours, not weeks","Real-time asset location and status"],
-  p:["bx410t","ba410t","bv400t","bep4dl"],sw:["ats","sdt","its"]},
- {id:"queue",ico:"🧾",t:"Long queues at payment and service counters",bm:"Barisan panjang di kaunter",
-  pain:["Slow or unreliable counter systems","Receipt printers jam at peak hours","Public unsure where to go"],
-  gain:["Fast, reliable POS terminals and receipt printers","Self-service kiosks take pressure off counters","Digital signage guides visitors"],
-  p:["tcx820","tcxss","prox","signage"],sw:["retail"]},
- {id:"field",ico:"🚓",t:"Enforcement officers write notices and receipts by hand",bm:"Notis & resit penguatkuasaan ditulis tangan",
-  pain:["Handwriting errors and illegible notices","Double entry back at the office","Slow issuing in the field"],
-  gain:["Print notices and receipts on the spot","Data entered once on the mobile device","Rugged printers that fit on a belt"],
-  p:["bfp3d","bfp2d","bep4dl"],sw:[]},
- {id:"security",ico:"🔐",t:"Worried about confidential documents being left at the printer",bm:"Keselamatan dokumen rasmi",
-  pain:["Sensitive printouts left in the tray","Old printers store data unprotected","No record of who printed or scanned"],
-  gain:["Secure release: prints only when the officer logs in","Encrypted storage with TPM and anti-malware","Full audit trail of usage"],
-  p:["es4528a","es4525ac","es7527ac","es339cs"],sw:["esuite","pms"]},
- {id:"manual",ico:"🔁",t:"Approvals, claims and applications are still manual",bm:"Proses kelulusan masih manual",
-  pain:["Paper forms move from desk to desk","Repetitive data entry wastes staff time","Hard to know where an application is stuck"],
-  gain:["Digital forms and approval workflows","Bots handle repetitive data entry","Clear status at every step"],
-  p:[],sw:["wfa","rpa","hrms","edms","bizmap"]},
- {id:"meet",ico:"🖥️",t:"Meetings and briefings aren't productive enough",bm:"Mesyuarat & taklimat kurang berkesan",
-  pain:["Projectors and whiteboards are separate tools","Remote participants can't see or hear well","Notes are lost after the meeting"],
-  gain:["One interactive screen for slides and whiteboard","Built-in camera and microphones for hybrid meetings","Save and share notes instantly"],
-  p:["tscreen","signage"],sw:[]}
-];
-
-const GROUPS = [["all","All"],["mfp-compact","Printers · Compact"],["mfp-standard","Printers · Standard"],["mfp-enterprise","Printers · Enterprise"],["labels","Barcode & asset labels"],["mobile","Mobile printers"],["counter","Counters & kiosks"],["display","Displays"]];
-
-/* ==================== Render ==================== */
-const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const byId = Object.fromEntries(PRODUCTS.map(p=>[p.id,p]));
-const softById = Object.fromEntries(SOFT.map(s=>[s.id,s]));
-const list = new Map();
-
-function waLink(text){ return "https://wa.me/"+CONFIG.wa+"?text="+encodeURIComponent(text); }
-function mailLink(subject, body){ return "mailto:"+CONFIG.email+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body||""); }
-
-document.querySelectorAll('[data-cfg]').forEach(el=>el.textContent=CONFIG[el.dataset.cfg]||"");
-document.querySelectorAll('.js-wa').forEach(a=>a.href=waLink("Hi "+CONFIG.name.split(" ")[0]+", I'd like to know more about Toshiba solutions for our office."));
-document.querySelectorAll('.js-mail').forEach(a=>a.href=mailLink("Enquiry: Toshiba solutions for our agency"));
+/* ============ RENDER ============ */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const first=CONFIG.name.split(" ")[0];
+const wa=t=>"https://wa.me/"+CONFIG.wa+"?text="+encodeURIComponent(t);
+document.querySelectorAll('[data-cfg]').forEach(e=>e.textContent=CONFIG[e.dataset.cfg]||"");
+document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya berminat untuk tahu lebih lanjut tentang penyelesaian Toshiba untuk pejabat kami."));
+document.querySelectorAll('.js-mail').forEach(a=>a.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Pertanyaan: Penyelesaian Toshiba"));
 document.querySelectorAll('.js-tel').forEach(a=>a.href="tel:+"+CONFIG.wa);
 
-function card(p){
-  const on = list.has(p.id);
-  return `<div class="card">
-    <div class="img"><span class="badge">${esc(p.badge)}</span>
-      <img loading="lazy" src="${U+p.img}" alt="${esc(p.n)}" onerror="this.parentNode.classList.add('noimg')">
-      <div class="ph"><i>🖨️</i>${esc(p.n)}</div></div>
-    <div class="body">
-      <span class="for">For: ${esc(p.f)}</span>
-      <h4>${esc(p.n)}</h4>
-      <ul>${p.b.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
-      <div class="acts">
-        <a class="btn" href="${U+p.pdf}" target="_blank" rel="noopener">⬇ Brochure</a>
-        <a class="btn" href="${P+p.s}/" target="_blank" rel="noopener">Full specs</a>
-        <button class="btn add ${on?'on':''}" data-add="${p.id}">${on?'✓ Added to enquiry':'+ Add to enquiry'}</button>
-      </div>
-    </div></div>`;
-}
+$('#clients').innerHTML=CLIENTS.map(c=>`<div class="client"><div class="mono">${esc(c.mono)}</div><b>${esc(c.n)}</b><span>${esc(c.t)}</span><div class="what">✓ ${esc(c.what)}</div></div>`).join("");
 
-/* Challenges */
-$('#chalGrid').innerHTML = CHALLENGES.map(c=>`<button class="chal" data-chal="${c.id}"><span class="ico">${c.ico}</span><h3>${esc(c.t)}</h3><span class="bmq">${esc(c.bm)}</span><span class="go">See the solution →</span></button>`).join("");
-function showChallenge(id){
-  const c = CHALLENGES.find(x=>x.id===id);
-  document.querySelectorAll('.chal').forEach(b=>b.classList.toggle('active', b.dataset.chal===id));
-  const prods = c.p.map(i=>byId[i]);
-  const sws = c.sw.map(i=>softById[i]);
-  $('#answer').innerHTML = `
-    <div class="head">
-      <div class="prob"><div class="k">The problem today</div><h3>${esc(c.t)}</h3><ul>${c.pain.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
-      <div class="sol"><div class="k">What changes for you</div><h3>A practical fix your team can use</h3><ul>${c.gain.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+function card(k){
+  const p=PROD[k];
+  const media=p.img?`<div class="img"><img loading="lazy" src="${U+p.img}" alt="${esc(p.n)}" onerror="this.parentNode.classList.add('noimg');this.parentNode.insertAdjacentHTML('beforeend','<span class=ico>🖨️</span>')"></div>`:`<div class="img"><span class="ico">${p.ico}</span></div>`;
+  const link=p.pdf?`<a href="${U+p.pdf}" target="_blank" rel="noopener">⬇ Brosur rasmi</a>`:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Ketahui lanjut →</a>`:`<a href="${wa("Salam "+first+", boleh kongsi maklumat & brosur "+p.n+"?")}" target="_blank" rel="noopener">💬 Minta maklumat</a>`;
+  return `<div class="card">${media}<div class="body"><span class="role">${esc(p.role)}</span><h5>${esc(p.n)}</h5><p>${esc(p.d)}</p><div class="lnk">${link}</div></div></div>`;
+}
+$('#pains').innerHTML=PAINS.map(p=>`<button class="pain" data-id="${p.id}"><span class="ico">${p.ico}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian →</span></button>`).join("");
+function show(id){
+  const p=PAINS.find(x=>x.id===id);
+  document.querySelectorAll('.pain').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  $('#answer').innerHTML=`
+    <div class="ba">
+      <div class="before"><div class="k">Sekarang</div><h3>${esc(p.t)}</h3><ul>${p.before.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="after"><div class="k">Selepas</div><h3>Apa yang berubah untuk pasukan anda</h3><ul>${p.after.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
     </div>
-    ${prods.length?`<div class="recs"><h4>Recommended products</h4><div class="grid">${prods.map(card).join("")}</div></div>`:""}
-    ${sws.length?`<div class="recs"><h4>Recommended software & services</h4><div class="sols" style="margin-top:0">${sws.map(solCard).join("")}</div></div>`:""}
-    <div class="foot"><span>Want us to check what fits your office?</span>
-      <a class="pill pill-red" href="${waLink("Hi "+CONFIG.name.split(" ")[0]+", our office's challenge: "+c.t+". Can we arrange a free assessment?")}" target="_blank" rel="noopener">Ask about this on WhatsApp →</a></div>`;
+    <div class="recs"><h4>Penyelesaian yang kami cadangkan</h4><div class="grid">${p.p.map(card).join("")}</div></div>
+    <div class="afoot"><span>Nak kami semak apa yang sesuai untuk pejabat anda?</span>
+      <a class="pill pill-red" href="${wa("Salam "+first+", pejabat kami ada masalah: "+p.t+". Boleh atur lawatan penilaian percuma?")}" target="_blank" rel="noopener">Tanya melalui WhatsApp →</a></div>`;
   $('#answer').classList.add('show');
-  bindAdds($('#answer'));
 }
-document.querySelectorAll('.chal').forEach(b=>b.addEventListener('click',()=>{showChallenge(b.dataset.chal); $('#answer').scrollIntoView({behavior:'smooth',block:'start'});}));
-
-/* Catalogue */
-let group="all", q="";
-$('#filters').innerHTML = GROUPS.map(([k,l])=>`<button class="chip ${k==='all'?'on':''}" data-g="${k}">${l}</button>`).join("") + `<input class="search" id="search" placeholder="Search model or use, e.g. 'asset', 'A3'">`;
-function renderGrid(){
-  const items = PRODUCTS.filter(p=>(group==="all"||p.g===group) && (!q || (p.n+" "+p.f+" "+p.b.join(" ")+" "+p.badge).toLowerCase().includes(q)));
-  $('#grid').innerHTML = items.map(card).join("") || `<p class="sub">No match. Try another word, or <a href="#contact">ask us</a>.</p>`;
-  $('#count').textContent = items.length+" product"+(items.length===1?"":"s");
-  bindAdds($('#grid'));
-}
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{group=c.dataset.g;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));renderGrid();}));
-$('#search').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();renderGrid();});
-document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>{const t=document.querySelector(`.chip[data-g="${a.dataset.jump}"]`); if(t) t.click();}));
-
-/* Software */
-function solCard(s){
-  const on=list.has(s.id);
-  return `<div class="sol"><span class="ico">${s.ico}</span><h4>${esc(s.n)}</h4><p>${esc(s.d)}</p><span class="for">For: ${esc(s.f)}</span>
-    <div class="lnk"><a href="${S+s.s}/" target="_blank" rel="noopener">Learn more →</a><button data-add="${s.id}" class="${on?'on':''}">${on?'✓ Added':'+ Add to enquiry'}</button></div></div>`;
-}
-$('#sols').innerHTML = SOFT.map(solCard).join("");
-
-/* Enquiry list */
-function nameOf(id){ return (byId[id]||softById[id]).n; }
-function toast(t){ const el=$('#toast'); el.textContent=t; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),1800); }
-function refreshButtons(){
-  document.querySelectorAll('[data-add]').forEach(b=>{
-    const on=list.has(b.dataset.add);
-    b.classList.toggle('on',on);
-    if(b.classList.contains('btn')) b.textContent = on?'✓ Added to enquiry':'+ Add to enquiry';
-    else b.textContent = on?'✓ Added':'+ Add to enquiry';
-  });
-  $('#listCount').textContent=list.size;
-  $('#items').innerHTML = list.size ? [...list.keys()].map(id=>`<div class="it"><span>${esc(nameOf(id))}</span><button data-rm="${id}" aria-label="Remove">×</button></div>`).join("") : `<div class="empty">Nothing added yet. Tap “+ Add to enquiry” on any product or software to build your list.</div>`;
-  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{list.delete(b.dataset.rm);refreshButtons();});
-}
-function bindAdds(root){
-  root.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{
-    const id=b.dataset.add;
-    if(list.has(id)){list.delete(id);toast("Removed from enquiry");} else {list.set(id,1);toast("Added: "+nameOf(id));}
-    refreshButtons();
-  });
-}
-bindAdds(document);
-function openList(o){ $('#drawer').classList.toggle('open',o); $('#scrim').classList.toggle('show',o); }
-$('#openList').onclick=()=>openList(true);
-$('#closeList').onclick=()=>openList(false);
-$('#scrim').onclick=()=>openList(false);
-function enquiryText(){
-  const ag=$('#fAgency').value.trim(), nm=$('#fName').value.trim(), nt=$('#fNote').value.trim();
-  return `Hi ${CONFIG.name.split(" ")[0]}, we'd like a quotation / more information.\n`+
-    (ag?`Agency: ${ag}\n`:"")+(nm?`Contact: ${nm}\n`:"")+
-    `\nItems:\n`+[...list.keys()].map((id,i)=>`${i+1}. ${nameOf(id)}`).join("\n")+
-    (nt?`\n\nNotes: ${nt}`:"");
-}
-$('#sendWa').onclick=()=>{ if(!list.size){toast("Add at least one item first");return;} window.open(waLink(enquiryText()),"_blank"); };
-$('#sendMail').onclick=()=>{ if(!list.size){toast("Add at least one item first");return;} location.href=mailLink("Enquiry: Toshiba quotation request",enquiryText()); };
-
-renderGrid(); refreshButtons();
+document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.id);$('#answer').scrollIntoView({behavior:'smooth',block:'start'});}));
 </script>
 </body>
 </html>
