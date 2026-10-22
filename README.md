@@ -8,11 +8,6 @@ Prepared by **Shaziq Idham**, Business Development Executive (Government Account
 - `index.html`: short, Bahasa Malaysia main page. 5 pain points, agencies served, procurement options, contact
 - `katalog.html`: full catalogue (44 products, 25 software solutions) with official brochures
 
-## Personalised link for each agency
-Add `?untuk=` and the agency name to the link, for example:
-`https://shaziqqidham.github.io/Toshiba-Gov-GLC-States/?untuk=Majlis Bandaraya Johor Bahru`
-The page then shows "Disediakan untuk Majlis Bandaraya Johor Bahru", and WhatsApp messages and the QR code include the agency name.
-
 ## Adding products later (shredder, CCTV, VoIP, etc.)
 In `index.html`, add an item to `PROD`, then list its key under the right pain point in `PAINS`. Agencies go in `CLIENTS`.
 

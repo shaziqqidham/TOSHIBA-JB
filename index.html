@@ -155,10 +155,6 @@ footer span{opacity:.7}
   .contact{padding:24px}
 }
 @media print{.fab{display:none}.answer{display:block!important}}
-/* Personalised banner */
-.for-agency[hidden]{display:none}
-.for-agency{display:flex;width:fit-content;align-items:center;gap:10px;margin-bottom:14px;background:#fff;color:var(--navy);font-weight:700;font-size:15px;padding:8px 16px 8px 8px;border-radius:40px}
-.for-agency i{font-style:normal;background:var(--red);color:#fff;font-size:12px;padding:4px 10px;border-radius:30px;letter-spacing:.04em}
 /* Calculator */
 .calc{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:26px}
 .calc .in{padding:26px;display:grid;gap:16px;align-content:start}
@@ -200,7 +196,6 @@ footer span{opacity:.7}
 
 <!-- 1. HERO -->
 <header class="hero"><div class="wrap">
-  <div class="for-agency" id="forAgency" hidden><i>KHAS</i><span>Disediakan untuk <b id="agencyName"></b></span></div>
   <span class="tag">Untuk Jabatan Kerajaan · PBT · Hospital · Yayasan · Badan Berkanun · GLC</span>
   <h1>Kurang kertas. Kurang kos.<br><em>Lebih selamat.</em></h1>
   <p>Pilih masalah pejabat anda di bawah. Kami tunjukkan penyelesaian yang sesuai, tanpa perlu baca katalog panjang.</p>
@@ -415,17 +410,6 @@ function show(id){
 }
 document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.id);$('#answer').scrollIntoView({behavior:'smooth',block:'start'});}));
 
-/* ============ LINK PERIBADI: ?untuk=Nama Agensi ============ */
-const params=new URLSearchParams(location.search);
-const agency=(params.get("untuk")||"").trim().slice(0,80);
-if(agency){
-  $('#agencyName').textContent=agency;
-  $('#forAgency').hidden=false;
-  document.title="Untuk "+agency+" | Toshiba Tec Malaysia";
-  document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya dari "+agency+". Saya berminat untuk tahu lebih lanjut tentang penyelesaian Toshiba untuk pejabat kami."));
-}
-const fromAgency=agency?" (dari "+agency+")":"";
-
 /* ============ KALKULATOR ============ */
 const rm=n=>"RM "+Math.round(n).toLocaleString("en-MY");
 function calc(){
@@ -433,7 +417,7 @@ function calc(){
   $('#cYear').textContent=rm(c*12);
   $('#cPerPage').textContent=p?"RM "+(c/p).toFixed(3):"–";
   $('#cPerMach').textContent=m?rm(c/m):"–";
-  $('#cSend').href=wa("Salam "+first+fromAgency+", ini anggaran kos cetakan pejabat kami:\n- Bilangan mesin: "+m+"\n- Muka surat sebulan: "+p.toLocaleString("en-MY")+"\n- Kos sebulan: "+rm(c)+"\n- Anggaran setahun: "+rm(c*12)+"\n\nBoleh sediakan perbandingan kos untuk kami?");
+  $('#cSend').href=wa("Salam "+first+", ini anggaran kos cetakan pejabat kami:\n- Bilangan mesin: "+m+"\n- Muka surat sebulan: "+p.toLocaleString("en-MY")+"\n- Kos sebulan: "+rm(c)+"\n- Anggaran setahun: "+rm(c*12)+"\n\nBoleh sediakan perbandingan kos untuk kami?");
 }
 ['#cMach','#cPages','#cCost'].forEach(s=>$(s).addEventListener('input',calc)); calc();
 
@@ -447,11 +431,11 @@ $('#saveContact').addEventListener('click',()=>{
 /* ============ KOD QR ============ */
 window.addEventListener('load',()=>{
   if(!window.QRCode){$('.qr').remove();return;}
-  new QRCode($('#qrbox'),{text:location.origin+location.pathname+location.search,width:256,height:256,colorDark:"#0C1A2B",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+  new QRCode($('#qrbox'),{text:location.origin+location.pathname,width:256,height:256,colorDark:"#0C1A2B",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
 });
 $('#qrDl').addEventListener('click',()=>{
   const c=$('#qrbox canvas'); if(!c) return;
-  const a=document.createElement('a');a.href=c.toDataURL("image/png");a.download="QR-"+(agency||"Toshiba-Shaziq").replace(/\s+/g,"-")+".png";a.click();
+  const a=document.createElement('a');a.href=c.toDataURL("image/png");a.download="QR-Toshiba-Shaziq.png";a.click();
 });
 
 /* ============ ANIMASI MASUK ============ */
