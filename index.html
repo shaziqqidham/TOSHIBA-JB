@@ -78,7 +78,7 @@ section{padding:80px 0}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 
 /* Pain points */
-.pains{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 .pain{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:all .18s}
 .pain:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,50,80,.08)}
 .pain.on{border-color:var(--red);background:var(--red-soft);box-shadow:0 0 0 2px var(--red) inset}
@@ -119,6 +119,19 @@ section{padding:80px 0}
 .also{margin-top:14px;font-size:14px;color:var(--muted)}
 .also b{color:var(--ink)}
 .afoot{padding:18px 24px;background:var(--bg);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-weight:600}
+
+/* Products & services */
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:var(--ink);transition:border-color .18s,box-shadow .18s,transform .18s}
+.svc:hover{border-color:var(--red);box-shadow:0 12px 26px rgba(10,50,80,.08);transform:translateY(-2px)}
+.svc .si{width:44px;height:44px;border-radius:12px;background:#E8F1FB;color:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;transition:background .18s,color .18s}
+.svc:hover .si{background:var(--red);color:#fff}
+.svc .si .i{width:22px;height:22px}
+.svc b{display:block;font-size:15px;line-height:1.3}
+.svc small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.svc .ask{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--red);margin-top:8px}
+.svc .ask .i{width:14px;height:14px}
+.svcnote{margin-top:16px;font-size:14px;color:var(--muted)}
 
 /* Proof */
 .proof{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -167,6 +180,7 @@ footer span{opacity:.7}
   .hero .wrap{grid-template-columns:1fr}
   .visual{height:340px;max-width:460px}
   .pains{grid-template-columns:repeat(2,1fr)}
+  .svcs{grid-template-columns:repeat(2,1fr)}
   .clients{grid-template-columns:repeat(5,1fr);gap:10px}
   .client{height:150px;padding:14px 8px 10px}
   .client img{max-height:70px}
@@ -176,6 +190,9 @@ footer span{opacity:.7}
 }
 @media (max-width:560px){
   .pains,.grid,.buy{grid-template-columns:1fr}
+  .svcs{grid-template-columns:1fr 1fr;gap:10px}
+  .svc{flex-direction:column;gap:10px;padding:14px}
+  .svc small{display:none}
   .clients{grid-template-columns:1fr 1fr;gap:10px}
   .client{height:150px;padding:16px 10px 12px}
   .client img{max-height:70px}
@@ -244,11 +261,17 @@ footer span{opacity:.7}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
   <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
   <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-led" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="4" rx="1"/><path d="M2 8.7h20M2 13.3h20M7 4v14M12 4v14M17 4v14"/><path d="M8 22h8M12 18v4"/></symbol>
+  <symbol id="i-kiosk" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="13" rx="2"/><path d="M12 15v5M8 22h8M10 11h4"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><path d="M2 3h20M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3M7 21l5-5 5 5"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+  <symbol id="i-handset" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
 </svg>
 
 <div class="top" id="top"><div class="wrap">
   <a class="brand" href="#" aria-label="Toshiba Tec Malaysia, laman utama"><img src="images/toshiba-logo.svg" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg'" alt="Toshiba"><span class="bt"><b>Toshiba Tec Malaysia</b><small>Cawangan Johor Bahru</small></span></a>
-  <nav class="nav" aria-label="Navigasi"><a href="#masalah">Cabaran</a><a href="#kira">Kalkulator</a><a href="#pelanggan">Pelanggan</a><a href="#hubungi">Hubungi</a></nav>
+  <nav class="nav" aria-label="Navigasi"><a href="#masalah">Cabaran</a><a href="#produk">Produk</a><a href="#kira">Kalkulator</a><a href="#pelanggan">Pelanggan</a><a href="#hubungi">Hubungi</a></nav>
   <a class="pill pill-wa js-wa" data-track="header" href="#" target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
 </div></div>
 
@@ -278,6 +301,15 @@ footer span{opacity:.7}
   <p class="sub">Pilih satu untuk melihat penyelesaian yang dicadangkan.</p>
   <div class="pains" id="pains"></div>
   <div class="answer" id="answer"></div>
+</div></section>
+
+<!-- 2b. PRODUCTS & SERVICES -->
+<section id="produk" style="padding-top:0"><div class="wrap">
+  <div class="k">Produk &amp; perkhidmatan</div>
+  <h2 class="h">Satu vendor untuk keperluan pejabat anda</h2>
+  <p class="sub">Bukan sekadar mesin fotostat. Tekan mana-mana produk untuk mendapatkan maklumat dan sebut harga melalui WhatsApp.</p>
+  <div class="svcs" id="svcs"></div>
+  <p class="svcnote">Semua produk dibekalkan mengikut spesifikasi dan keperluan agensi, termasuk pemasangan dan sokongan selepas jualan.</p>
 </div></section>
 
 <!-- 3. PROOF -->
@@ -422,10 +454,30 @@ const PROD = {
   cctv:     {n:"Sistem CCTV", role:"Keselamatan premis", ico:"cctv", d:"Memantau premis dan bilik rekod, dengan pilihan pembelian atau sewaan."},
   kiosk:    {n:"Pro-X Hybrid Kiosk", role:"Kios layan diri", img:"2025/08/Pro-X-Hybrid-Kiosk.webp", pdf:"2024/11/Toshiba-Pro-X-Hybrid-Kiosk_TTMS.pdf", d:"Orang awam boleh membuat bayaran atau pendaftaran sendiri, sekali gus memendekkan barisan di kaunter."},
   signage:  {n:"Papan Tanda Digital", role:"Paparan maklumat", img:"2026/09/Toshiba-Digital-Signage.webp", pdf:"2018/05/Digital-Signage_UHM4324H_TTMS.pdf", d:"Memaparkan notis dan maklumat giliran dengan jelas."},
+  audio:    {n:"Sistem Audio & PA", role:"Audio", ico:"speaker", d:"Pengumuman dan suara yang jelas di dewan, bilik mesyuarat dan kawasan awam."},
+  led:      {n:"LED Board & Videowall", role:"Paparan", ico:"led", d:"Paparan besar dan terang untuk maklumat, acara dan pengumuman, dalam atau luar bangunan."},
+  voip:     {n:"Telefon IP (VoIP)", role:"Komunikasi", ico:"handset", d:"Talian pejabat berasaskan internet, dengan sambungan antara cawangan dan kos panggilan lebih rendah."},
   attend:   {n:"Sistem Kehadiran", role:"Kehadiran staf", ico:"clock", d:"Kehadiran direkodkan secara automatik, dengan laporan sedia untuk Unit Sumber Manusia."}
 };
 
-/* ============ 5 MASALAH ============ */
+/* ============ PRODUK & PERKHIDMATAN (jalur ikon) ============
+   Untuk tambah produk: salin satu baris. ic = nama ikon. */
+const SERVICES = [
+  {ic:"printer",  n:"Mesin fotostat & pencetak", d:"Cetak, imbas, salin dan faks"},
+  {ic:"monitor",  n:"Digital signage",           d:"Paparan notis, iklan dan maklumat"},
+  {ic:"led",      n:"LED board & videowall",     d:"Dalam dan luar bangunan"},
+  {ic:"kiosk",    n:"Kios layan diri",           d:"Bayaran, pendaftaran dan giliran"},
+  {ic:"board",    n:"Paparan interaktif",        d:"Bilik mesyuarat dan latihan"},
+  {ic:"speaker",  n:"Sistem audio & PA",         d:"Dewan, bilik mesyuarat dan pengumuman"},
+  {ic:"cctv",     n:"CCTV",                      d:"Pemantauan premis dan bilik rekod"},
+  {ic:"handset",  n:"Telefon IP (VoIP)",         d:"Talian pejabat dan antara cawangan"},
+  {ic:"clock",    n:"Sistem kehadiran",          d:"Rekod kehadiran staf secara automatik"},
+  {ic:"shredder", n:"Penghancur kertas",         d:"Saiz pejabat hingga industri"},
+  {ic:"tag",      n:"Pencetak label & tag aset", d:"Kod bar dan RFID"},
+  {ic:"folder",   n:"Perisian pejabat",          d:"Dokumen, aset, HR dan aliran kerja"}
+];
+
+/* ============ MASALAH ============ */
 const PAINS = [
   {id:"kos", ico:"wallet", t:"Kos cetakan tinggi dan sukar dikawal",
    before:["Penggunaan cetakan setiap unit tidak dapat dipantau","Mesin lama kerap rosak dan kos pembaikan tinggi","Sukar memberikan justifikasi bajet semasa audit"],
@@ -446,7 +498,11 @@ const PAINS = [
   {id:"kaunter", ico:"users", t:"Kaunter sesak dan urusan masih manual",
    before:["Barisan panjang di kaunter perkhidmatan","Orang awam tidak pasti kaunter yang perlu dituju","Kehadiran staf direkodkan secara manual"],
    after:["Kios layan diri mengurangkan beban kaunter","Papan tanda digital membantu memandu pengunjung","Kehadiran direkodkan secara automatik"],
-   p:["kiosk","signage","attend"]}
+   p:["kiosk","signage","attend"]},
+  {id:"komunikasi", ico:"speaker", t:"Pengumuman dan komunikasi kurang berkesan",
+   before:["Pengumuman di dewan atau lobi tidak jelas didengar","Notis bercetak cepat lapuk dan sukar dikemas kini","Talian telefon pejabat terhad dan kos panggilan tinggi"],
+   after:["Sistem audio dan PA yang jelas di setiap ruang","LED board dikemas kini dari satu tempat","Telefon IP dengan sambungan antara cawangan"],
+   p:["audio","led","voip"]}
 ];
 
 /* ============ RENDER ============ */
@@ -467,6 +523,7 @@ function card(k){
   const link=p.pdf?`<a href="${U+p.pdf}" target="_blank" rel="noopener">${ic('file')}Brosur rasmi</a>`:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Maklumat lanjut ${ic('arrow')}</a>`:`<a href="${wa("Salam "+first+", boleh kongsikan maklumat dan brosur "+p.n+"?")}" data-track="maklumat-${k}" target="_blank" rel="noopener">${ic('wa','fill')}Dapatkan maklumat</a>`;
   return `<div class="card">${media}<div class="body"><span class="role">${esc(p.role)}</span><h5>${esc(p.n)}</h5><p>${esc(p.d)}</p><div class="lnk">${link}</div></div></div>`;
 }
+$('#svcs').innerHTML=SERVICES.map((s,i)=>`<a class="svc" href="${wa("Salam "+first+", saya berminat dengan "+s.n+". Boleh kongsikan maklumat dan sebut harga?")}" data-track="produk-${s.ic}" target="_blank" rel="noopener"><span class="si">${ic(s.ic)}</span><span><b>${esc(s.n)}</b><small>${esc(s.d)}</small><span class="ask">${ic('wa','fill')}Minta sebut harga</span></span></a>`).join("");
 $('#pains').innerHTML=PAINS.map(p=>`<button class="pain" data-id="${p.id}"><span class="ico">${ic(p.ico)}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian →</span></button>`).join("");
 function show(id){
   const p=PAINS.find(x=>x.id===id);
