@@ -8,6 +8,14 @@ Prepared by **Shaziq Idham**, Business Development Executive (Government Account
 - `index.html`: short, Bahasa Malaysia main page. 5 pain points, agencies served, procurement options, contact
 - `katalog.html`: full catalogue (44 products, 25 software solutions) with official brochures
 
+## Images
+All product images and most logos are stored in this repo (`images/` and `logos/`), with the original website as a fallback.
+To add a new image from another site, add a line to `tools/assets.txt` (`URL|output-path`) and push. GitHub downloads it automatically.
+
+## Visitor statistics
+The page counts visits and clicks (WhatsApp, pain points, brochures) with GoatCounter, which uses no cookies.
+To see the numbers, create a free account at goatcounter.com with the code `toshibajb`, then open https://toshibajb.goatcounter.com.
+
 ## Adding products later (shredder, CCTV, VoIP, etc.)
 In `index.html`, add an item to `PROD`, then list its key under the right pain point in `PAINS`. Agencies go in `CLIENTS`.
 

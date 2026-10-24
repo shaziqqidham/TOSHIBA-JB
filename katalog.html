@@ -227,7 +227,7 @@ footer .note{font-size:12px;opacity:.6;max-width:640px}
 
 <!-- ============ TOP BAR ============ -->
 <div class="top"><div class="wrap">
-  <div class="brand"><img src="https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg" alt="Toshiba"><span>Public Sector & GLC</span></div>
+  <div class="brand"><img src="images/toshiba-logo.svg" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg'" alt="Toshiba"><span>Public Sector & GLC</span></div>
   <div class="call"><span class="num" data-cfg="phone"></span><a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a></div>
 </div></div>
 
@@ -428,6 +428,7 @@ const CONFIG = {
 /* ================================================================ */
 
 const U = "https://www.toshibatec.com.my/wp-content/uploads/";
+const IMG = p => "images/products/"+p.split("/").pop().replace(/\.[^.]+$/,"").replace(/[^A-Za-z0-9-]+/g,"-").replace(/^-+|-+$/g,"").toLowerCase()+".webp";
 const P = "https://www.toshibatec.com.my/product/";
 const S = "https://www.toshibatec.com.my/solution/";
 
@@ -571,7 +572,7 @@ function card(p){
   const on = list.has(p.id);
   return `<div class="card">
     <div class="img"><span class="badge">${esc(p.badge)}</span>
-      <img loading="lazy" src="${U+p.img}" alt="${esc(p.n)}" onerror="this.parentNode.classList.add('noimg')">
+      <img loading="lazy" src="${IMG(p.img)}" data-remote="${U+p.img}" alt="${esc(p.n)}" onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.parentNode.classList.add('noimg')}">
       <div class="ph"><i>🖨️</i>${esc(p.n)}</div></div>
     <div class="body">
       <span class="for">For: ${esc(p.f)}</span>

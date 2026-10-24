@@ -29,11 +29,11 @@ body{font-family:'Fira Sans',system-ui,sans-serif;color:var(--ink);background:va
 a{color:inherit}
 img{max-width:100%;display:block}
 button{font:inherit;cursor:pointer}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
 h2.h{font-size:clamp(26px,3.6vw,36px);font-weight:800;letter-spacing:-.015em;line-height:1.15;margin-top:6px}
 .sub{color:var(--muted);font-size:16px;max-width:600px;margin-top:10px}
-section{padding:64px 0}
+section{padding:80px 0}
 .pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:13px 20px;border-radius:40px;border:none}
 .pill-wa{background:var(--wa);color:#04361a}
 .pill-red{background:var(--red);color:#fff}
@@ -42,16 +42,35 @@ section{padding:64px 0}
 .pill-line{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .pill-line:hover{border-color:var(--ink)}
 
-/* Top */
-.top{background:var(--navy);color:#fff}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
-.brand{display:flex;align-items:center;gap:12px;font-size:13px}
-.brand img{height:20px;filter:brightness(0) invert(1)}
-.brand span{border-left:1px solid rgba(255,255,255,.3);padding-left:12px;opacity:.85}
-.top .pill{padding:9px 14px;font-size:14px}
+/* Icons */
+.i{width:1.15em;height:1.15em;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em}
+.i.fill{fill:currentColor;stroke:none}
+/* Top (sticky, white) */
+.top{background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;transition:box-shadow .2s}
+.top.scrolled{box-shadow:0 6px 24px rgba(10,50,80,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand img{height:20px;width:auto}
+.brand .bt{border-left:1px solid var(--line);padding-left:14px;line-height:1.2}
+.brand .bt b{display:block;font-size:14px;font-weight:700}
+.brand .bt small{font-size:12px;color:var(--muted)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14.5px;font-weight:600;color:var(--muted);padding:8px 12px;border-radius:8px}
+.nav a:hover{color:var(--navy);background:var(--bg)}
+.top .pill{padding:10px 16px;font-size:14px}
 
 /* Hero */
-.hero{background:radial-gradient(900px 420px at 90% -10%,rgba(228,37,38,.3),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:60px 0 72px}
+.hero{background:radial-gradient(900px 480px at 85% -20%,rgba(228,37,38,.28),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:72px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.visual{position:relative;height:420px}
+.visual .stage{position:absolute;inset:20px 10px 20px 40px;background:linear-gradient(180deg,#fff,#EEF2F6);border-radius:24px;box-shadow:0 30px 60px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.visual .stage img{max-height:86%;max-width:80%;object-fit:contain;mix-blend-mode:multiply}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;color:var(--ink);border-radius:14px;padding:11px 14px;font-size:13.5px;font-weight:600;line-height:1.25;box-shadow:0 14px 34px rgba(10,50,80,.22);max-width:230px}
+.chip .ci{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none}
+.chip .ci .i{width:18px;height:18px}
+.chip.c1{top:0;left:0}.chip.c1 .ci{background:var(--red-soft);color:var(--red)}
+.chip.c2{top:44%;right:-6px}.chip.c2 .ci{background:#E8F1FB;color:var(--navy)}
+.chip.c3{bottom:0;left:16px}.chip.c3 .ci{background:#E7F6EE;color:var(--green)}
 .hero .tag{display:inline-block;font-size:13px;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:30px}
 .hero h1{font-size:clamp(34px,5.4vw,56px);line-height:1.06;font-weight:800;letter-spacing:-.025em;margin-top:18px;max-width:780px}
 .hero h1 em{font-style:normal;color:#ff5a66}
@@ -63,7 +82,9 @@ section{padding:64px 0}
 .pain{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;text-align:left;display:flex;flex-direction:column;gap:8px;transition:all .18s}
 .pain:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,50,80,.08)}
 .pain.on{border-color:var(--red);background:var(--red-soft);box-shadow:0 0 0 2px var(--red) inset}
-.pain .ico{font-size:28px}
+.pain .ico{width:44px;height:44px;border-radius:12px;background:var(--red-soft);color:var(--red);display:flex;align-items:center;justify-content:center}
+.pain .ico .i{width:22px;height:22px}
+.pain.on .ico{background:var(--red);color:#fff}
 .pain h3{font-size:15.5px;line-height:1.3}
 .pain .go{margin-top:auto;font-size:13px;font-weight:700;color:var(--red)}
 
@@ -82,17 +103,19 @@ section{padding:64px 0}
 .recs{padding:22px 24px;border-top:1px solid var(--line)}
 .recs h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.card{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:#fff;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 30px rgba(10,50,80,.10);transform:translateY(-2px)}
 .card .img{height:150px;background:linear-gradient(180deg,#F3F5F8,#E9EDF2);display:flex;align-items:center;justify-content:center;padding:14px}
 .card .img img{max-height:122px;object-fit:contain;mix-blend-mode:multiply}
-.card .img .ico{font-size:52px}
+.card .img .ico{width:72px;height:72px;border-radius:18px;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(10,50,80,.08)}
+.card .img .ico .i{width:34px;height:34px;stroke-width:1.7}
 .card .img.noimg img{display:none}
 .card .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card .role{font-size:12px;font-weight:700;color:var(--red-dark);background:var(--red-soft);padding:3px 8px;border-radius:6px;align-self:flex-start}
 .card h5{font-size:15px;line-height:1.3}
 .card p{font-size:13.5px;color:var(--muted)}
 .card .lnk{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700}
-.card .lnk a{color:var(--red);text-decoration:none}
+.card .lnk a{color:var(--red);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
 .also{margin-top:14px;font-size:14px;color:var(--muted)}
 .also b{color:var(--ink)}
 .afoot{padding:18px 24px;background:var(--bg);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;font-weight:600}
@@ -111,7 +134,7 @@ section{padding:64px 0}
 
 /* Buy */
 .buy{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
-.buy div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.buy div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 2px 6px rgba(10,50,80,.04)}
 .buy b{display:block;font-size:16px;margin-bottom:4px}
 .buy span{font-size:14px;color:var(--muted)}
 
@@ -130,13 +153,19 @@ section{padding:64px 0}
 .rep .rl{font-size:14px;color:var(--muted)}
 .rep .rows{margin-top:12px;display:grid;gap:6px;font-size:14px}
 .rep .rows a{text-decoration:none;font-weight:600}
+.rep .rows div{display:flex;align-items:center;gap:10px}
+.rep .rows .i{color:var(--red)}
 .vendor{margin-top:14px;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;display:grid;gap:2px}
 footer{background:var(--navy);color:#fff;padding:28px 0;margin-top:64px;font-size:12.5px;opacity:.95}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer span{opacity:.7}
-.fab{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);text-decoration:none;font-size:27px}
+.fab{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);text-decoration:none}
+.fab .i{width:30px;height:30px}
 
 @media (max-width:980px){
+  .nav{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .visual{height:340px;max-width:460px}
   .pains{grid-template-columns:repeat(2,1fr)}
   .clients{grid-template-columns:repeat(5,1fr);gap:10px}
   .client{height:150px;padding:14px 8px 10px}
@@ -150,13 +179,18 @@ footer span{opacity:.7}
   .clients{grid-template-columns:1fr 1fr;gap:10px}
   .client{height:150px;padding:16px 10px 12px}
   .client img{max-height:70px}
-  .brand span{display:none}
+  .brand .bt small{display:none}
+  .brand .bt{padding-left:10px}
+  .brand .bt b{font-size:12.5px}
+  .top .pill span{display:none}
+  .visual{display:none}
+  .hero{padding:52px 0 64px}
   section{padding:48px 0}
   .contact{padding:24px}
 }
 @media print{.fab{display:none}.answer{display:block!important}}
 /* Calculator */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:26px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:26px;box-shadow:0 20px 40px rgba(10,50,80,.08)}
 .calc .in{padding:26px;display:grid;gap:16px;align-content:start}
 .calc label{font-size:14px;font-weight:700;display:grid;gap:6px}
 .calc label small{font-weight:500;color:var(--muted);font-size:12.5px}
@@ -175,7 +209,7 @@ footer span{opacity:.7}
 .qr #qrbox{width:96px;height:96px;flex:none;background:#fff}
 .qr #qrbox img,.qr #qrbox canvas{width:96px!important;height:96px!important}
 .qr p{font-size:12.5px;color:var(--muted)}
-.qr button,.save{border:1px solid var(--line);background:#fff;border-radius:30px;padding:7px 12px;font-size:13px;font-weight:700;color:var(--ink);margin-top:6px}
+.qr button,.save{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:30px;padding:7px 12px;font-size:13px;font-weight:700;color:var(--ink);margin-top:6px}
 .save{margin-top:12px}
 .qr button:hover,.save:hover{border-color:var(--ink)}
 .train{margin-top:14px;font-size:14.5px;font-weight:600;color:var(--green)}
@@ -188,20 +222,52 @@ footer span{opacity:.7}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-userplus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.5-1.5"/></symbol>
+  <symbol id="i-shredder" viewBox="0 0 24 24"><path d="M7 10V4a1 1 0 0 1 1-1h6l3 3v4"/><rect x="3" y="10" width="18" height="4" rx="1"/><path d="M7 14v6M10 14v4M14 14v6M17 14v4"/></symbol>
+  <symbol id="i-cctv" viewBox="0 0 24 24"><path d="M16.75 12h3.63a1 1 0 0 1 .9 1.45l-2.04 4.07a1 1 0 0 1-1.7.13l-2.13-2.97"/><path d="M17.1 9.05a1 1 0 0 1 .45 1.34l-3.1 6.21a1 1 0 0 1-1.35.45L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3z"/><path d="M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15M2 21v-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+</svg>
 
-<div class="top"><div class="wrap">
-  <div class="brand"><img src="https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg" alt="Toshiba"><span>Kerajaan · Negeri · GLC</span></div>
-  <a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+<div class="top" id="top"><div class="wrap">
+  <a class="brand" href="#" aria-label="Toshiba Tec Malaysia, laman utama"><img src="images/toshiba-logo.svg" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/04/logo-toshiba.svg'" alt="Toshiba"><span class="bt"><b>Toshiba Tec Malaysia</b><small>Cawangan Johor Bahru</small></span></a>
+  <nav class="nav" aria-label="Navigasi"><a href="#masalah">Cabaran</a><a href="#kira">Kalkulator</a><a href="#pelanggan">Pelanggan</a><a href="#hubungi">Hubungi</a></nav>
+  <a class="pill pill-wa js-wa" data-track="header" href="#" target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
 </div></div>
 
 <!-- 1. HERO -->
 <header class="hero"><div class="wrap">
+  <div>
   <span class="tag">Untuk Jabatan Kerajaan · PBT · Hospital · Yayasan · Badan Berkanun · GLC</span>
   <h1>Kurang kertas. Kurang kos.<br><em>Lebih selamat.</em></h1>
   <p>Pilih cabaran yang dihadapi oleh pejabat anda dan lihat penyelesaian yang sesuai, tanpa perlu meneliti katalog yang panjang.</p>
   <div class="ctas">
     <a class="pill pill-red" href="#masalah">Kenal pasti cabaran pejabat anda →</a>
-    <a class="pill pill-ghost js-wa" href="#" target="_blank" rel="noopener">Mohon lawatan percuma</a>
+    <a class="pill pill-ghost js-wa" data-track="hero" href="#" target="_blank" rel="noopener">Mohon lawatan percuma</a>
+  </div>
+  </div>
+  <div class="visual" aria-hidden="true">
+    <div class="stage"><img src="images/products/p3.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/07/p3.webp'" alt=""></div>
+    <div class="chip c1"><span class="ci"><svg class="i"><use href="#i-shield"/></svg></span>Storan bersulit &amp; log masuk pengguna</div>
+    <div class="chip c2"><span class="ci"><svg class="i"><use href="#i-chart"/></svg></span>Laporan kos mengikut jabatan</div>
+    <div class="chip c3"><span class="ci"><svg class="i"><use href="#i-wrench"/></svg></span>Servis &amp; sokongan di Johor</div>
   </div>
 </div></header>
 
@@ -215,7 +281,7 @@ footer span{opacity:.7}
 </div></section>
 
 <!-- 3. PROOF -->
-<section class="proof"><div class="wrap">
+<section class="proof" id="pelanggan"><div class="wrap">
   <div class="k">Dipercayai oleh</div>
   <h2 class="h">Agensi yang bekerjasama dengan kami</h2>
   <p class="sub">Antara agensi kerajaan, PBT, universiti, hospital, yayasan dan badan berkanun yang menggunakan penyelesaian kami.</p>
@@ -244,7 +310,7 @@ footer span{opacity:.7}
         <div><b id="cPerMach">RM 0</b><span>kos sebulan bagi setiap mesin</span></div>
       </div>
       <p class="note">Kebanyakan pejabat tidak menyedari jumlah sebenar sehingga dikira bagi tempoh setahun. Ingin mengetahui potensi penjimatan dengan kadar Toshiba? Hantar maklumat ini dan kami akan membuat pengiraan untuk pejabat anda, tanpa sebarang komitmen.</p>
-      <a class="pill pill-wa" id="cSend" href="#" target="_blank" rel="noopener">💬 Ketahui potensi penjimatan</a>
+      <a class="pill pill-wa" id="cSend" href="#" target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg>Ketahui potensi penjimatan</a>
     </div>
   </div>
 </div></section>
@@ -262,7 +328,7 @@ footer span{opacity:.7}
   <p class="train">✓ Termasuk pemasangan dan latihan pengguna di premis anda</p>
   <div class="more">
     <p><b>Ingin melihat semua produk dan brosur rasmi?</b><span>Katalog lengkap merangkumi 44 produk Toshiba dan 25 penyelesaian perisian.</span></p>
-    <a class="pill pill-line" href="katalog.html">Lihat katalog lengkap →</a>
+    <a class="pill pill-line" href="katalog.html" data-track="katalog">Lihat katalog lengkap <svg class="i"><use href="#i-arrow"/></svg></a>
   </div>
 </div></section>
 
@@ -273,8 +339,8 @@ footer span{opacity:.7}
       <h2>Lawatan dan penilaian pejabat secara percuma</h2>
       <p>Saya akan melawat pejabat anda, meneliti cara dokumen dicetak dan disimpan serta cara orang awam dilayan, kemudian mencadangkan penyelesaian yang benar-benar diperlukan.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
-        <a class="pill pill-wa js-wa" href="#" target="_blank" rel="noopener">💬 Hubungi melalui WhatsApp</a>
-        <a class="pill pill-ghost js-mail" href="#">✉ E-mel</a>
+        <a class="pill pill-wa js-wa" data-track="hubungi" href="#" target="_blank" rel="noopener"><svg class="i fill"><use href="#i-wa"/></svg>Hubungi melalui WhatsApp</a>
+        <a class="pill pill-ghost js-mail" href="#"><svg class="i"><use href="#i-mail"/></svg>E-mel</a>
       </div>
     </div>
     <div class="rep">
@@ -282,17 +348,17 @@ footer span{opacity:.7}
       <div class="nm" data-cfg="name"></div>
       <div class="rl" data-cfg="role"></div>
       <div class="rows">
-        <div>📱 <a class="js-tel" href="#" data-cfg="phone"></a></div>
-        <div>✉ <a class="js-mail" href="#" data-cfg="email"></a></div>
-        <div>📍 <span data-cfg="branch"></span></div>
+        <div><svg class="i"><use href="#i-phone"/></svg><a class="js-tel" href="#" data-cfg="phone"></a></div>
+        <div><svg class="i"><use href="#i-mail"/></svg><a class="js-mail" href="#" data-cfg="email"></a></div>
+        <div><svg class="i"><use href="#i-pin"/></svg><span data-cfg="branch"></span></div>
       </div>
       <div class="vendor">
         <div><b>Toshiba Tec Malaysia Sdn. Bhd.</b></div>
         <div>No. pendaftaran MOF: <span data-cfg="mof"></span></div>
         <div>Talian bebas tol 1800 28 2000 · www.toshibatec.com.my</div>
       </div>
-      <button class="save" id="saveContact">📇 Simpan kenalan</button>
-      <div class="qr"><div id="qrbox" aria-label="Kod QR halaman ini"></div><div><p>Imbas untuk membuka halaman ini. Sesuai digunakan pada kad nama, surat sebut harga dan slaid pembentangan.</p><button id="qrDl">⬇ Muat turun kod QR</button></div></div>
+      <button class="save" id="saveContact"><svg class="i"><use href="#i-userplus"/></svg>Simpan kenalan</button>
+      <div class="qr"><div id="qrbox" aria-label="Kod QR halaman ini"></div><div><p>Imbas untuk membuka halaman ini. Sesuai digunakan pada kad nama, surat sebut harga dan slaid pembentangan.</p><button id="qrDl"><svg class="i"><use href="#i-download"/></svg>Muat turun kod QR</button></div></div>
     </div>
   </div>
 </div></section>
@@ -302,7 +368,7 @@ footer span{opacity:.7}
   <span>Spesifikasi dan brosur diperoleh daripada toshibatec.com.my dan tertakluk kepada perubahan.</span>
 </div></footer>
 
-<a class="fab js-wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<a class="fab js-wa" data-track="butang-terapung" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i fill"><use href="#i-wa"/></svg></a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 <script>
@@ -314,13 +380,14 @@ const CONFIG = {
   wa:     "60177717206",
   email:  "shaziq@toshibatec.com.my",
   branch: "Toshiba Tec Malaysia, Cawangan Johor Bahru",
-  mof:    "357-00037495"
+  mof:    "357-00037495",
+  goatcounter: "toshibajb"   // Statistik pelawat: daftar percuma di goatcounter.com dengan kod ini. Kosongkan ("") untuk matikan.
 };
 
 /* ============ AGENSI (dinding logo) ============
    Hanya agensi yang ada "logo" akan dipapar. Untuk tambah: letak fail logo dalam folder "logos/" dan tulis logo:"logos/namafail.png" */
 const CLIENTS = [
-  {n:"Majlis Bandaraya Johor Bahru", logo:"https://www.mbjb.gov.my/sites/default/files/2022-06/logo_mbjb%402x.png"},
+  {n:"Majlis Bandaraya Johor Bahru", logo:"logos/mbjb.png", remote:"https://www.mbjb.gov.my/sites/default/files/2022-06/logo_mbjb%402x.png"},
   {n:"Universiti Teknologi Malaysia", logo:"https://www.utm.my/wp-content/uploads/2022/10/LOGO-UTM.png"},
   {n:"Yayasan Pelajaran Johor",      logo:"https://www.ypj.gov.my/assets/images/logo-ypj.png"},
   {n:"YPJ Plantations",               logo:"logos/ypj-plantations.png"},
@@ -328,8 +395,8 @@ const CLIENTS = [
   {n:"Suruhanjaya Koperasi Malaysia",logo:"logos/skm.png"},
   {n:"Kementerian Pelancongan, Seni dan Budaya", logo:"logos/motac.png"},
   {n:"Muzium Diraja Abu Bakar",       logo:"logos/muzium-diraja-abu-bakar.png"},
-  {n:"Jabatan Kerja Raya",            logo:"https://www.jkr.gov.my/sites/default/files/jkr_1_0.png"},
-  {n:"Universiti Kuala Lumpur",       logo:"https://www.unikl.edu.my/wp-content/uploads/2025/11/UniKL-White-ori.webp", dark:true},
+  {n:"Jabatan Kerja Raya",            logo:"logos/jkr.png", remote:"https://www.jkr.gov.my/sites/default/files/jkr_1_0.png"},
+  {n:"Universiti Kuala Lumpur",       logo:"logos/unikl.png", remote:"https://www.unikl.edu.my/wp-content/uploads/2025/11/UniKL-White-ori.webp", dark:true},
   // Belum ada logo, tidak dipapar:
   {n:"Desa Bina Diri Mersing"},
   {n:"Jabatan Tenaga Kerja"}
@@ -338,42 +405,45 @@ const CLIENTS = [
 /* ============ PRODUK ============
    img = gambar dari toshibatec.com.my (kosong = guna ikon), pdf = brosur rasmi (kosong = minta melalui WhatsApp) */
 const U = "https://www.toshibatec.com.my/wp-content/uploads/";
+/* Gambar produk disimpan dalam folder images/products (salinan dari toshibatec.com.my) */
+const IMG = p => "images/products/"+p.split("/").pop().replace(/\.[^.]+$/,"").replace(/[^A-Za-z0-9-]+/g,"-").replace(/^-+|-+$/g,"").toLowerCase()+".webp";
+const ic = (name,cls) => `<svg class="i${cls?' '+cls:''}"><use href="#i-${name}"/></svg>`;
 const PROD = {
   mfpStd:   {n:"e-STUDIO 3025AC / 3525AC / 4525AC", role:"Pencetak pejabat", img:"2025/07/p3.webp", pdf:"2024/05/e-STUDIO3025AC_3525AC_4525AC-Series_TTMS.pdf", d:"Mencetak, mengimbas dan menyalin. Setiap pengguna perlu log masuk supaya kos dapat dijejaki."},
   mfpMono:  {n:"e-STUDIO 3028A / 3528A / 4528A", role:"Pencetak selamat", img:"2025/07/p1.webp", pdf:"2024/05/e-STUDIO3028A_3528A_4528A-Series_TTMS.pdf", d:"Storan bersulit, TPM dan perlindungan anti-perisian hasad. Dokumen hanya dicetak apabila pegawai berada di mesin."},
   mfpFast:  {n:"e-STUDIO 5528A / 6528A", role:"Imbasan pantas", img:"2025/07/p71.webp", pdf:"2024/05/e-STUDIO5528A_6528A-Series_TTMS.pdf", d:"Mengimbas fail tebal dengan pantas (sehingga 240 muka surat seminit) terus ke format digital."},
-  pms:      {n:"Sistem Pengurusan Cetakan", role:"Perisian", ico:"📊", link:"https://www.toshibatec.com.my/solution/toshiba-print-management-system/", d:"Laporan penggunaan mengikut jabatan atau pengguna, berserta had kuota."},
-  bpo:      {n:"Perkhidmatan Imbasan (BPO)", role:"Perkhidmatan", ico:"📦", link:"https://www.toshibatec.com.my/solution/business-process-outsourcing/", d:"Pasukan kami mendigitalkan fail lama anda tanpa mengganggu urusan harian."},
-  edms:     {n:"Sistem Pengurusan Dokumen (EDMS)", role:"Perisian", ico:"🗂️", link:"https://www.toshibatec.com.my/solution/electronic-document-management-system-edms/", d:"Rekod boleh dicari dalam beberapa saat, bukan berjam-jam di bilik fail."},
-  ats:      {n:"Sistem Penjejakan Aset", role:"Perisian", ico:"🏷️", link:"https://www.toshibatec.com.my/solution/asset-tracking-system/", d:"Mendaftar, menanda dan mengesahkan aset alih melalui imbasan."},
+  pms:      {n:"Sistem Pengurusan Cetakan", role:"Perisian", ico:"chart", link:"https://www.toshibatec.com.my/solution/toshiba-print-management-system/", d:"Laporan penggunaan mengikut jabatan atau pengguna, berserta had kuota."},
+  bpo:      {n:"Perkhidmatan Imbasan (BPO)", role:"Perkhidmatan", ico:"scan", link:"https://www.toshibatec.com.my/solution/business-process-outsourcing/", d:"Pasukan kami mendigitalkan fail lama anda tanpa mengganggu urusan harian."},
+  edms:     {n:"Sistem Pengurusan Dokumen (EDMS)", role:"Perisian", ico:"folder", link:"https://www.toshibatec.com.my/solution/electronic-document-management-system-edms/", d:"Rekod boleh dicari dalam beberapa saat, bukan berjam-jam di bilik fail."},
+  ats:      {n:"Sistem Penjejakan Aset", role:"Perisian", ico:"tag", link:"https://www.toshibatec.com.my/solution/asset-tracking-system/", d:"Mendaftar, menanda dan mengesahkan aset alih melalui imbasan."},
   bx410t:   {n:"Toshiba BX410T", role:"Pencetak tag aset", img:"2025/08/BX410T_F.webp", pdf:"2025/08/Toshiba-BX410T_TTMS.pdf", d:"Mencetak label kod bar dan RFID yang tahan lama untuk aset."},
   bfp3d:    {n:"Toshiba B-FP3D", role:"Pencetak mudah alih", img:"2025/08/Toshiba-B-FP3D2.webp", pdf:"2020/01/Toshiba-B-FP3D_TTMS.pdf", d:"Untuk pemeriksaan stor dan pelabelan di lapangan."},
-  shredder: {n:"Penghancur Kertas Industri", role:"Pelupusan dokumen", ico:"🗑️", d:"Melupuskan dokumen sulit dalam kuantiti besar dengan selamat."},
-  cctv:     {n:"Sistem CCTV", role:"Keselamatan premis", ico:"📹", d:"Memantau premis dan bilik rekod, dengan pilihan pembelian atau sewaan."},
+  shredder: {n:"Penghancur Kertas Industri", role:"Pelupusan dokumen", ico:"shredder", d:"Melupuskan dokumen sulit dalam kuantiti besar dengan selamat."},
+  cctv:     {n:"Sistem CCTV", role:"Keselamatan premis", ico:"cctv", d:"Memantau premis dan bilik rekod, dengan pilihan pembelian atau sewaan."},
   kiosk:    {n:"Pro-X Hybrid Kiosk", role:"Kios layan diri", img:"2025/08/Pro-X-Hybrid-Kiosk.webp", pdf:"2024/11/Toshiba-Pro-X-Hybrid-Kiosk_TTMS.pdf", d:"Orang awam boleh membuat bayaran atau pendaftaran sendiri, sekali gus memendekkan barisan di kaunter."},
   signage:  {n:"Papan Tanda Digital", role:"Paparan maklumat", img:"2026/09/Toshiba-Digital-Signage.webp", pdf:"2018/05/Digital-Signage_UHM4324H_TTMS.pdf", d:"Memaparkan notis dan maklumat giliran dengan jelas."},
-  attend:   {n:"Sistem Kehadiran", role:"Kehadiran staf", ico:"🕘", d:"Kehadiran direkodkan secara automatik, dengan laporan sedia untuk Unit Sumber Manusia."}
+  attend:   {n:"Sistem Kehadiran", role:"Kehadiran staf", ico:"clock", d:"Kehadiran direkodkan secara automatik, dengan laporan sedia untuk Unit Sumber Manusia."}
 };
 
 /* ============ 5 MASALAH ============ */
 const PAINS = [
-  {id:"kos", ico:"💸", t:"Kos cetakan tinggi dan sukar dikawal",
+  {id:"kos", ico:"wallet", t:"Kos cetakan tinggi dan sukar dikawal",
    before:["Penggunaan cetakan setiap unit tidak dapat dipantau","Mesin lama kerap rosak dan kos pembaikan tinggi","Sukar memberikan justifikasi bajet semasa audit"],
    after:["Laporan penggunaan mengikut jabatan dan pegawai","Kuota dan cetakan selamat mengurangkan pembaziran","Satu kontrak penyelenggaraan untuk semua mesin"],
    p:["mfpStd","pms","mfpMono"]},
-  {id:"fail", ico:"🗄️", t:"Fail fizikal bertimbun dan sukar dicari",
+  {id:"fail", ico:"archive", t:"Fail fizikal bertimbun dan sukar dicari",
    before:["Pegawai menghabiskan masa mencari fail di bilik rekod","Fail hilang semasa berpindah antara jabatan","Ruang simpanan semakin terhad"],
    after:["Fail lama didigitalkan oleh pasukan kami","Rekod boleh dicari dalam beberapa saat","Pergerakan fail dapat dijejaki"],
    p:["bpo","edms","mfpFast"]},
-  {id:"aset", ico:"🏷️", t:"Pemeriksaan aset dan stor mengambil masa yang lama",
+  {id:"aset", ico:"tag", t:"Pemeriksaan aset dan stor mengambil masa yang lama",
    before:["Label aset pudar atau tertanggal","Pengesahan tahunan mengambil masa berminggu-minggu","Teguran audit yang berulang"],
    after:["Tag kod bar dan RFID yang tahan lama","Pengesahan melalui imbasan, siap dalam beberapa jam","Status dan lokasi aset sentiasa dikemas kini"],
    p:["ats","bx410t","bfp3d"]},
-  {id:"selamat", ico:"🔐", t:"Keselamatan dokumen dan premis",
+  {id:"selamat", ico:"shield", t:"Keselamatan dokumen dan premis",
    before:["Dokumen sulit tertinggal di mesin pencetak","Dokumen sulit dibuang tanpa dihancurkan","Bilik rekod dan premis tidak dipantau"],
    after:["Dokumen hanya dicetak apabila pegawai log masuk","Pelupusan selamat menggunakan penghancur kertas industri","Pemantauan CCTV sepanjang masa"],
    p:["mfpMono","shredder","cctv"]},
-  {id:"kaunter", ico:"🧾", t:"Kaunter sesak dan urusan masih manual",
+  {id:"kaunter", ico:"users", t:"Kaunter sesak dan urusan masih manual",
    before:["Barisan panjang di kaunter perkhidmatan","Orang awam tidak pasti kaunter yang perlu dituju","Kehadiran staf direkodkan secara manual"],
    after:["Kios layan diri mengurangkan beban kaunter","Papan tanda digital membantu memandu pengunjung","Kehadiran direkodkan secara automatik"],
    p:["kiosk","signage","attend"]}
@@ -389,15 +459,15 @@ document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya 
 document.querySelectorAll('.js-mail').forEach(a=>a.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Pertanyaan: Penyelesaian Toshiba"));
 document.querySelectorAll('.js-tel').forEach(a=>a.href="tel:+"+CONFIG.wa);
 
-$('#clients').innerHTML=CLIENTS.filter(c=>c.logo).map(c=>`<div class="client${c.dark?' dark':''}"><div class="lg"><img src="${c.logo}" alt="${esc(c.n)}" loading="lazy" onerror="this.closest('.client').remove()"></div><span>${esc(c.n)}</span></div>`).join("");
+$('#clients').innerHTML=CLIENTS.filter(c=>c.logo).map(c=>`<div class="client${c.dark?' dark':''}"><div class="lg"><img src="${c.logo}" alt="${esc(c.n)}" loading="lazy" ${c.remote?`data-remote="${c.remote}"`:''} onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.closest('.client').remove()}"></div><span>${esc(c.n)}</span></div>`).join("");
 
 function card(k){
   const p=PROD[k];
-  const media=p.img?`<div class="img"><img loading="lazy" src="${U+p.img}" alt="${esc(p.n)}" onerror="this.parentNode.classList.add('noimg');this.parentNode.insertAdjacentHTML('beforeend','<span class=ico>🖨️</span>')"></div>`:`<div class="img"><span class="ico">${p.ico}</span></div>`;
-  const link=p.pdf?`<a href="${U+p.pdf}" target="_blank" rel="noopener">⬇ Brosur rasmi</a>`:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Maklumat lanjut →</a>`:`<a href="${wa("Salam "+first+", boleh kongsikan maklumat dan brosur "+p.n+"?")}" target="_blank" rel="noopener">💬 Dapatkan maklumat</a>`;
+  const media=p.img?`<div class="img"><img loading="lazy" src="${IMG(p.img)}" data-remote="${U+p.img}" alt="${esc(p.n)}" onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.outerHTML='<span class=ico>${ic('printer').replace(/"/g,"&quot;")}</span>'}"></div>`:`<div class="img"><span class="ico">${ic(p.ico)}</span></div>`;
+  const link=p.pdf?`<a href="${U+p.pdf}" target="_blank" rel="noopener">${ic('file')}Brosur rasmi</a>`:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Maklumat lanjut ${ic('arrow')}</a>`:`<a href="${wa("Salam "+first+", boleh kongsikan maklumat dan brosur "+p.n+"?")}" data-track="maklumat-${k}" target="_blank" rel="noopener">${ic('wa','fill')}Dapatkan maklumat</a>`;
   return `<div class="card">${media}<div class="body"><span class="role">${esc(p.role)}</span><h5>${esc(p.n)}</h5><p>${esc(p.d)}</p><div class="lnk">${link}</div></div></div>`;
 }
-$('#pains').innerHTML=PAINS.map(p=>`<button class="pain" data-id="${p.id}"><span class="ico">${p.ico}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian →</span></button>`).join("");
+$('#pains').innerHTML=PAINS.map(p=>`<button class="pain" data-id="${p.id}"><span class="ico">${ic(p.ico)}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian →</span></button>`).join("");
 function show(id){
   const p=PAINS.find(x=>x.id===id);
   document.querySelectorAll('.pain').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
@@ -408,7 +478,7 @@ function show(id){
     </div>
     <div class="recs"><h4>Penyelesaian yang kami cadangkan</h4><div class="grid">${p.p.map(card).join("")}</div></div>
     <div class="afoot"><span>Ingin kami menilai penyelesaian yang sesuai untuk pejabat anda?</span>
-      <a class="pill pill-red" href="${wa("Salam "+first+", pejabat kami menghadapi cabaran: "+p.t+". Boleh kami aturkan lawatan penilaian secara percuma?")}" target="_blank" rel="noopener">Hubungi kami melalui WhatsApp →</a></div>`;
+      <a class="pill pill-red" href="${wa("Salam "+first+", pejabat kami menghadapi cabaran: "+p.t+". Boleh kami aturkan lawatan penilaian secara percuma?")}" data-track="cabaran-${p.id}" target="_blank" rel="noopener">Hubungi kami melalui WhatsApp ${ic('arrow')}</a></div>`;
   $('#answer').classList.add('show');
 }
 document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.id);$('#answer').scrollIntoView({behavior:'smooth',block:'start'});}));
@@ -442,9 +512,29 @@ $('#qrDl').addEventListener('click',()=>{
   const a=document.createElement('a');a.href=c.toDataURL("image/png");a.download="QR-Toshiba-Shaziq.png";a.click();
 });
 
+/* ============ STATISTIK PELAWAT (GoatCounter, tanpa kuki) ============ */
+const track=(name,title)=>{ try{ window.goatcounter && window.goatcounter.count && window.goatcounter.count({path:name,title:title||name,event:true}); }catch(e){} };
+if(CONFIG.goatcounter){
+  const s=document.createElement('script'); s.async=true; s.src="https://gc.zgo.at/count.js";
+  s.dataset.goatcounter="https://"+CONFIG.goatcounter+".goatcounter.com/count"; document.head.appendChild(s);
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a,button'); if(!a) return;
+  const href=a.getAttribute('href')||"";
+  if(a.matches('.pain')) return track("cabaran-"+a.dataset.id,"Pilih cabaran: "+a.querySelector('h3').textContent);
+  if(href.startsWith("https://wa.me")) return track("whatsapp-"+(a.dataset.track||(a.id==='cSend'?'kalkulator':'lain')),"Klik WhatsApp");
+  if(/\.pdf($|\?)/i.test(href)) return track("brosur-"+href.split("/").pop(),"Muat turun brosur");
+  if(a.id==='saveContact') return track("simpan-kenalan","Simpan kenalan");
+  if(a.id==='qrDl') return track("muat-turun-qr","Muat turun QR");
+  if(a.dataset.track) return track(a.dataset.track,a.textContent.trim());
+});
+
+/* ============ HEADER BAYANG BILA SKROL ============ */
+const topBar=$('#top'); const onScroll=()=>topBar.classList.toggle('scrolled',scrollY>8); addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
 /* ============ ANIMASI MASUK ============ */
 const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12}):null;
-document.querySelectorAll('section .wrap > *').forEach(el=>{ if(io){el.classList.add('reveal');io.observe(el);} });
+document.querySelectorAll('section:not(.hero) .wrap > *').forEach(el=>{ if(io){el.classList.add('reveal');io.observe(el);} });
 </script>
 </body>
 </html>
