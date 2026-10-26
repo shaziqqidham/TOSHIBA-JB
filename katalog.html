@@ -23,8 +23,8 @@
 .jump{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .jump a{color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 14px;align-items:center}
-.chip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--muted)}
-.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.fchip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--muted)}
+.fchip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .search{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:9px 16px;font:inherit;font-size:14px;min-width:240px;background:#fff}
 .count{font-size:13px;color:var(--muted);margin-bottom:12px}
 .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -176,14 +176,14 @@ function card(p){
     </div></div>`;
 }
 let group="all", q="";
-$('#filters').innerHTML=GROUPS.map(([k,l])=>`<button class="chip ${k==='all'?'on':''}" data-g="${k}">${l}</button>`).join("")+`<input class="search" id="search" placeholder="Cari model atau kegunaan, cth. 'aset', 'A3'">`;
+$('#filters').innerHTML=GROUPS.map(([k,l])=>`<button class="fchip ${k==='all'?'on':''}" data-g="${k}">${l}</button>`).join("")+`<input class="search" id="search" placeholder="Cari model atau kegunaan, cth. 'aset', 'A3'">`;
 function render(){
   const items=PRODUCTS.filter(p=>(group==="all"||p.g===group)&&(!q||(p.n+" "+p.f+" "+p.b.join(" ")+" "+p.badge).toLowerCase().includes(q)));
   $('#grid').innerHTML=items.map(card).join("")||`<p class="sub">Tiada padanan. Cuba perkataan lain atau <a href="#" class="js-wa2">tanya kami melalui WhatsApp</a>.</p>`;
   const a=$('.js-wa2'); if(a){a.href=wa("Salam "+first+", saya mencari produk untuk: "+q);a.target="_blank";}
   $('#count').textContent=items.length+" produk";
 }
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{group=c.dataset.g;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));render();}));
+document.querySelectorAll('.fchip').forEach(c=>c.addEventListener('click',()=>{group=c.dataset.g;document.querySelectorAll('.fchip').forEach(x=>x.classList.toggle('on',x===c));render();}));
 $('#search').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();render();});
 render();
 
