@@ -110,6 +110,8 @@ section{padding:80px 0}
 .card .img .ico{width:72px;height:72px;border-radius:18px;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(10,50,80,.08)}
 .card .img .ico .i{width:34px;height:34px;stroke-width:1.7}
 .card .img.noimg img{display:none}
+.card .img.photo{padding:0;background:#EEF1F4}
+.card .img.photo img{width:100%;height:100%;max-height:none;object-fit:cover;mix-blend-mode:normal}
 .card .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card .role{font-size:12px;font-weight:700;color:var(--red-dark);background:var(--red-soft);padding:3px 8px;border-radius:6px;align-self:flex-start}
 .card h5{font-size:15px;line-height:1.3}
@@ -446,7 +448,7 @@ const PROD = {
   mfpFast:  {n:"e-STUDIO 5528A / 6528A", role:"Imbasan pantas", img:"2025/07/p71.webp", pdf:"2024/05/e-STUDIO5528A_6528A-Series_TTMS.pdf", d:"Mengimbas fail tebal dengan pantas (sehingga 240 muka surat seminit) terus ke format digital."},
   pms:      {n:"Sistem Pengurusan Cetakan", role:"Perisian", ico:"chart", link:"https://www.toshibatec.com.my/solution/toshiba-print-management-system/", d:"Laporan penggunaan mengikut jabatan atau pengguna, berserta had kuota."},
   bpo:      {n:"Perkhidmatan Imbasan (BPO)", role:"Perkhidmatan", ico:"scan", link:"https://www.toshibatec.com.my/solution/business-process-outsourcing/", d:"Pasukan kami mendigitalkan fail lama anda tanpa mengganggu urusan harian."},
-  edms:     {n:"Sistem Pengurusan Dokumen (EDMS)", role:"Perisian", ico:"folder", link:"https://www.toshibatec.com.my/solution/electronic-document-management-system-edms/", d:"Rekod boleh dicari dalam beberapa saat, bukan berjam-jam di bilik fail."},
+  edms:     {n:"Toshiba EDMS", role:"Sistem pengurusan dokumen", ico:"folder", photo:true, img:"2025/06/ChatGPT-Image-Jun-20-2025-05_27_53-PM.webp", local:"images/solutions/edms.webp", link:"https://www.toshibatec.com.my/solution/electronic-document-management-system-edms/", d:"Rekod boleh dicari dalam beberapa saat, bukan berjam-jam di bilik fail."},
   ats:      {n:"Sistem Penjejakan Aset", role:"Perisian", ico:"tag", link:"https://www.toshibatec.com.my/solution/asset-tracking-system/", d:"Mendaftar, menanda dan mengesahkan aset alih melalui imbasan."},
   bx410t:   {n:"Toshiba BX410T", role:"Pencetak tag aset", img:"2025/08/BX410T_F.webp", pdf:"2025/08/Toshiba-BX410T_TTMS.pdf", d:"Mencetak label kod bar dan RFID yang tahan lama untuk aset."},
   bfp3d:    {n:"Toshiba B-FP3D", role:"Pencetak mudah alih", img:"2025/08/Toshiba-B-FP3D2.webp", pdf:"2020/01/Toshiba-B-FP3D_TTMS.pdf", d:"Untuk pemeriksaan stor dan pelabelan di lapangan."},
@@ -519,7 +521,7 @@ $('#clients').innerHTML=CLIENTS.filter(c=>c.logo).map(c=>`<div class="client${c.
 
 function card(k){
   const p=PROD[k];
-  const media=p.img?`<div class="img"><img loading="lazy" src="${IMG(p.img)}" data-remote="${U+p.img}" alt="${esc(p.n)}" onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.outerHTML='<span class=ico>${ic('printer').replace(/"/g,"&quot;")}</span>'}"></div>`:`<div class="img"><span class="ico">${ic(p.ico)}</span></div>`;
+  const media=p.img?`<div class="img${p.photo?' photo':''}"><img loading="lazy" src="${p.local||IMG(p.img)}" data-remote="${U+p.img}" alt="${esc(p.n)}" onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.outerHTML='<span class=ico>${ic('printer').replace(/"/g,"&quot;")}</span>'}"></div>`:`<div class="img"><span class="ico">${ic(p.ico)}</span></div>`;
   const link=p.pdf?`<a href="${U+p.pdf}" target="_blank" rel="noopener">${ic('file')}Brosur rasmi</a>`:p.link?`<a href="${p.link}" target="_blank" rel="noopener">Maklumat lanjut ${ic('arrow')}</a>`:`<a href="${wa("Salam "+first+", boleh kongsikan maklumat dan brosur "+p.n+"?")}" data-track="maklumat-${k}" target="_blank" rel="noopener">${ic('wa','fill')}Dapatkan maklumat</a>`;
   return `<div class="card">${media}<div class="body"><span class="role">${esc(p.role)}</span><h5>${esc(p.n)}</h5><p>${esc(p.d)}</p><div class="lnk">${link}</div></div></div>`;
 }

@@ -44,3 +44,4 @@ https://www.utm.my/wp-content/uploads/2022/10/LOGO-UTM.png|logos/utm
 https://www.ypj.gov.my/assets/images/logo-ypj.png|logos/ypj
 https://www.jkr.gov.my/sites/default/files/jkr_1_0.png|logos/jkr
 https://www.unikl.edu.my/wp-content/uploads/2025/11/UniKL-White-ori.webp|logos/unikl
+https://www.toshibatec.com.my/wp-content/uploads/2025/06/ChatGPT-Image-Jun-20-2025-05_27_53-PM.webp|images/solutions/edms
