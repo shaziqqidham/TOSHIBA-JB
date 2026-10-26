@@ -6,7 +6,8 @@ Prepared by **Shaziq Idham**, Business Development Executive (Government Account
 
 ## Pages
 - `index.html`: short, Bahasa Malaysia main page. 5 pain points, agencies served, procurement options, contact
-- `katalog.html`: full catalogue (44 products, 25 software solutions) with official brochures
+- `katalog.html`: full catalogue in Malay, same design as the main page: 44 Toshiba products with brochures, on-request products, and software
+- `styles.css`: shared design for both pages
 
 ## Images
 All product images and most logos are stored in this repo (`images/` and `logos/`), with the original website as a fallback.
