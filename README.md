@@ -35,3 +35,9 @@ Open `index.html` and edit the `CONFIG` block near the bottom of the file (name,
 Open `index.html` in any web browser with internet access. Product images and brochure PDFs load from toshibatec.com.my.
 
 To share it as a website, turn on **GitHub Pages** (Settings → Pages → Deploy from branch → `main` / root). Note that GitHub Pages sites are public even when the repository is private, and this page shows your mobile number and MOF number.
+
+## Design system
+The pages follow one shared stylesheet, `styles.css`, redesigned with the Hallmark design skill:
+- Every colour and size is a token at the top of `styles.css` (Toshiba red `#E42526`, navy `#0A3250`). Change a token there instead of writing new colours.
+- The Fira Sans font is stored in `fonts/` (SIL Open Font License), so the site no longer loads Google Fonts.
+- The main page tells the buying journey in four numbered stages: the problem, the range, the cost and the purchase. It ends with a letter from the account manager.
