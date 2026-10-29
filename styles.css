@@ -5,6 +5,7 @@
 /* Hallmark · waive 38iii · the third sentence "Lebih selamat." is a whole line in Toshiba red, once, in the hero · it is the brand promise line of the brochure, not one coloured word */
 /* Hallmark · waive 39b · the six pain buttons are choice cards, taller than a control by design · each opens its solution panel, a card is the right target size for that choice */
 /* Hallmark · waive 44c · the catalogue page takes a Banner hero, 548px of 900 · its job is the product grid, so the filters and first products show above the fold */
+/* Hallmark · dropped Berapakah%20potensi · the calculator WhatsApp message was reworded in the humanizer pass; same wa.me number, it now ends "Boleh kira kos ini dengan kadar Toshiba?" */
 /* Hallmark · answered F21 · the h4 product titles render inside the recommendation panel, below its h3 heading, not after the section h2 */
 
 /* Fira Sans, self-hosted (SIL Open Font License, fonts/OFL.txt) */
@@ -214,7 +215,6 @@ section{padding:var(--section-pad) 0}
 .calc .pill[aria-disabled="true"]{pointer-events:none}
 .calc-msg{font-size:var(--text-sm);font-weight:700;color:var(--color-red-dark);min-height:1.5em}
 .calc-msg:empty{display:none}
-.calc .compare{font-size:var(--text-sm);font-weight:700;color:var(--color-on-dark)}
 
 /* Stage 4: the purchase, rows beside the head */
 .buyrow{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--space-16);align-items:start}
