@@ -166,6 +166,7 @@ document.addEventListener('click',e=>{
 
 
 document.documentElement.classList.add('js');
+if('IntersectionObserver' in window){const fab=$('.fab'),hero=$('.khero');new IntersectionObserver(es=>es.forEach(e=>fab.classList.toggle('off',e.isIntersecting))).observe(hero);}
 const topBar=$('#top'); const onScroll=()=>topBar.classList.toggle('scrolled',scrollY>8); addEventListener('scroll',onScroll,{passive:true}); onScroll();
 </script>
 </body>

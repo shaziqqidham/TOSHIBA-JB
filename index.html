@@ -64,13 +64,22 @@
       <a class="pill pill-red" href="#masalah">Kenal pasti cabaran anda</a>
       <a class="pill pill-ghost js-wa" data-track="hero" href="#" target="_blank" rel="noopener">Mohon lawatan percuma</a>
     </div>
-    <p class="tag">Untuk jabatan kerajaan, PBT, hospital, yayasan, badan berkanun dan GLC</p>
+    <ul class="facts">
+      <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Storan bersulit &amp; log masuk pengguna</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Laporan kos mengikut jabatan</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>Servis &amp; sokongan di Johor</li>
+    </ul>
   </div>
-  <ul class="facts">
-    <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Storan bersulit &amp; log masuk pengguna</li>
-    <li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Laporan kos mengikut jabatan</li>
-    <li><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>Servis &amp; sokongan di Johor</li>
-  </ul>
+  <div class="trust">
+    <p class="trust-t"><b>Pembekal berdaftar MOF <span data-cfg="mof">357-00037495</span></b><span class="tag">Untuk jabatan kerajaan, PBT, hospital, yayasan, badan berkanun dan GLC</span></p>
+    <ul class="trust-logos" aria-label="Antara pelanggan kami">
+      <li><img src="logos/mbjb.png" alt="Majlis Bandaraya Johor Bahru" width="120" height="48"></li>
+      <li><img src="logos/kpj-johor-specialist.png" alt="KPJ Johor Specialist Hospital" width="120" height="48"></li>
+      <li><img src="logos/skm.png" alt="Suruhanjaya Koperasi Malaysia" width="120" height="48"></li>
+      <li><img src="logos/motac.png" alt="Kementerian Pelancongan, Seni dan Budaya" width="120" height="48"></li>
+      <li><img src="logos/muzium-diraja-abu-bakar.png" alt="Muzium Diraja Abu Bakar" width="120" height="48"></li>
+    </ul>
+  </div>
 </div></header>
 
 <main class="stages">
@@ -81,7 +90,7 @@
     <p class="sub">Pilih satu untuk melihat penyelesaian yang dicadangkan.</p>
   </div>
   <div class="pains" id="pains"></div>
-  <div class="answer" id="answer"></div>
+  <div class="answer" id="answer" tabindex="-1" aria-live="polite"></div>
 </div></section>
 
 <!-- STAGE 2: the range -->
@@ -89,7 +98,12 @@
   <div class="range-side">
     <h2 class="h">Satu vendor untuk keperluan pejabat anda</h2>
     <p class="sub">Bukan sekadar mesin fotostat. Tekan mana-mana produk untuk mendapatkan maklumat dan sebut harga melalui WhatsApp.</p>
-    <figure class="machine"><img src="images/products/p3.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/07/p3.webp'" alt="Mesin pelbagai fungsi Toshiba e-STUDIO" loading="lazy"></figure>
+    <div class="mosaic">
+      <figure><img src="images/products/p3.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/07/p3.webp'" alt="Mesin pelbagai fungsi Toshiba e-STUDIO" loading="lazy"><figcaption>Mesin fotostat</figcaption></figure>
+      <figure><img src="images/products/pro-x-hybrid-kiosk.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/08/Pro-X-Hybrid-Kiosk.webp'" alt="Kios layan diri Toshiba Pro-X Hybrid" loading="lazy"><figcaption>Kios layan diri</figcaption></figure>
+      <figure><img src="images/products/toshiba-digital-signage.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2026/09/Toshiba-Digital-Signage.webp'" alt="Papan tanda digital Toshiba" loading="lazy"><figcaption>Digital signage</figcaption></figure>
+      <figure><img src="images/products/bx410t-f.webp" onerror="this.onerror=null;this.src='https://www.toshibatec.com.my/wp-content/uploads/2025/08/BX410T_F.webp'" alt="Pencetak tag aset Toshiba BX410T" loading="lazy"><figcaption>Pencetak tag aset</figcaption></figure>
+    </div>
   </div>
   <div class="range-list">
     <div class="svcs" id="svcs"></div>
@@ -105,12 +119,13 @@
   </div>
   <div class="calc">
     <div class="in">
-      <label>Bilangan mesin pencetak dan penyalin<input id="cMach" type="number" inputmode="numeric" min="0" value="5"></label>
+      <label>Bilangan mesin pencetak dan penyalin<input id="cMach" type="text" inputmode="numeric" autocomplete="off" value="5"></label>
       <div class="two">
-        <label>Cetakan hitam putih sebulan<small>Jumlah muka surat bagi semua mesin</small><input id="cMono" type="number" inputmode="numeric" min="0" value="15000"></label>
-        <label>Cetakan berwarna sebulan<small>Jumlah muka surat bagi semua mesin</small><input id="cColour" type="number" inputmode="numeric" min="0" value="3000"></label>
+        <label>Cetakan hitam putih sebulan<small>Jumlah muka surat bagi semua mesin</small><input id="cMono" type="text" inputmode="numeric" autocomplete="off" value="15,000"></label>
+        <label>Cetakan berwarna sebulan<small>Jumlah muka surat bagi semua mesin</small><input id="cColour" type="text" inputmode="numeric" autocomplete="off" value="3,000"></label>
       </div>
-      <label>Kos bulanan semasa (RM)<small>Termasuk sewaan, toner, kertas dan penyelenggaraan</small><input id="cCost" type="number" inputmode="decimal" min="0" value="3000"></label>
+      <label>Kos bulanan semasa (RM)<small>Termasuk sewaan, toner, kertas dan penyelenggaraan</small><input id="cCost" type="text" inputmode="decimal" autocomplete="off" value="3,000"></label>
+      <p class="calc-msg" id="cMsg" role="status" aria-live="polite"></p>
     </div>
     <div class="out">
       <div class="lab">Anggaran kos setahun</div>
@@ -120,6 +135,7 @@
         <div><b id="cPerMach">RM 0</b><span>kos sebulan bagi setiap mesin</span></div>
       </div>
       <p class="note">Kebanyakan pejabat tidak menyedari jumlah sebenar sehingga dikira bagi tempoh setahun. Ingin mengetahui potensi penjimatan dengan kadar Toshiba? Hantar maklumat ini dan kami akan membuat pengiraan untuk pejabat anda, tanpa sebarang komitmen.</p>
+      <p class="compare">Perbandingan merangkumi sewaan mesin, toner, kertas dan penyelenggaraan.</p>
       <a class="pill pill-wa" id="cSend" href="#" target="_blank" rel="noopener"><svg class="i fill" aria-hidden="true"><use href="#i-wa"/></svg>Ketahui potensi penjimatan</a>
     </div>
   </div>
@@ -316,11 +332,14 @@ function card(k){
   return `<div class="card">${media}<div class="body"><span class="role">${esc(p.role)}</span><h4 class="ct">${esc(p.n)}</h4><p>${esc(p.d)}</p><div class="lnk">${link}</div></div></div>`;
 }
 $('#svcs').innerHTML=SERVICES.map((s,i)=>`<a class="svc" href="${wa("Salam "+first+", saya berminat dengan "+s.n+". Boleh kongsikan maklumat dan sebut harga?")}" data-track="produk-${s.ic}" target="_blank" rel="noopener"><span class="si">${ic(s.ic)}</span><span><b>${esc(s.n)}</b><small>${esc(s.d)}</small><span class="ask">${ic('wa','fill')}Minta sebut harga</span></span></a>`).join("");
-$('#pains').innerHTML=PAINS.map(p=>`<button class="pain" data-id="${p.id}"><span class="ico">${ic(p.ico)}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian</span></button>`).join("");
-function show(id){
-  const p=PAINS.find(x=>x.id===id);
-  document.querySelectorAll('.pain').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
-  $('#answer').innerHTML=`
+$('#pains').innerHTML=PAINS.map(p=>`<button class="pain" type="button" data-id="${p.id}" aria-expanded="false" aria-controls="answer"><span class="ico">${ic(p.ico)}</span><h3>${esc(p.t)}</h3><span class="go">Lihat penyelesaian</span></button>`).join("");
+const phone=matchMedia('(max-width:640px)');
+function show(id,btn){
+  const p=PAINS.find(x=>x.id===id), ans=$('#answer');
+  document.querySelectorAll('.pain').forEach(b=>{const on=b.dataset.id===id;b.classList.toggle('on',on);b.setAttribute('aria-expanded',on);});
+  if(phone.matches&&btn) btn.after(ans); else $('#pains').after(ans);
+  ans.innerHTML=`
+    <div class="ahead"><p>Cabaran dipilih: <b>${esc(p.t)}</b></p><button type="button" class="backpick" id="backPick">Pilih cabaran lain</button></div>
     <div class="ba">
       <div class="before"><h3>Situasi semasa</h3><ul>${p.before.map(x=>`<li>${ic('x')}<span>${esc(x)}</span></li>`).join("")}</ul></div>
       <div class="after"><h3>Manfaat kepada pejabat anda</h3><ul>${p.after.map(x=>`<li>${ic('check')}<span>${esc(x)}</span></li>`).join("")}</ul></div>
@@ -328,21 +347,31 @@ function show(id){
     <div class="recs"><h3>Penyelesaian yang kami cadangkan</h3><div class="grid">${p.p.map(card).join("")}</div></div>
     <div class="afoot"><span>Ingin kami menilai penyelesaian yang sesuai untuk pejabat anda?</span>
       <a class="pill pill-red" href="${wa("Salam "+first+", pejabat kami menghadapi cabaran: "+p.t+". Boleh kami aturkan lawatan penilaian secara percuma?")}" data-track="cabaran-${p.id}" target="_blank" rel="noopener">Hubungi kami melalui WhatsApp ${ic('arrow')}</a></div>`;
-  $('#answer').classList.add('show');
+  ans.classList.add('show');
+  $('#backPick').addEventListener('click',()=>{const b=document.querySelector('.pain.on')||document.querySelector('.pain');b.scrollIntoView({behavior:'smooth',block:'center'});b.focus({preventScroll:true});});
 }
-document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.id);$('#answer').scrollIntoView({behavior:'smooth',block:'start'});}));
+document.querySelectorAll('.pain').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.id,b);const a=$('#answer');a.scrollIntoView({behavior:'smooth',block:'start'});a.focus({preventScroll:true});}));
 
 /* ============ KALKULATOR ============ */
 const rm=n=>"RM "+Math.round(n).toLocaleString("en-MY");
+const num=v=>{const t=String(v).replace(/[^0-9.]/g,'');return t===''||isNaN(+t)?null:+t;};
+const CALC=['#cMach','#cMono','#cColour','#cCost'];
 function calc(){
-  const m=Math.max(0,+$('#cMach').value||0), bw=Math.max(0,+$('#cMono').value||0), col=Math.max(0,+$('#cColour').value||0), c=Math.max(0,+$('#cCost').value||0);
+  const vals=CALC.map(s=>num($(s).value)), send=$('#cSend');
+  if(vals.some(v=>v===null)){
+    $('#cMsg').textContent="Isi semua kotak untuk melihat anggaran. Masukkan 0 jika tiada.";
+    $('#cYear').textContent="RM –"; $('#cPerPage').textContent="–"; $('#cPerMach').textContent="–";
+    send.setAttribute('aria-disabled','true'); send.removeAttribute('href'); return;
+  }
+  $('#cMsg').textContent=""; send.removeAttribute('aria-disabled');
+  const [m,bw,col,c]=vals;
   const p=bw+col;
   $('#cYear').textContent=rm(c*12);
   $('#cPerPage').textContent=p?"RM "+(c/p).toFixed(3):"–";
   $('#cPerMach').textContent=m?rm(c/m):"–";
   $('#cSend').href=wa("Salam "+first+", ini anggaran kos cetakan pejabat kami:\n- Bilangan mesin: "+m+"\n- Cetakan hitam putih sebulan: "+bw.toLocaleString("en-MY")+" muka surat\n- Cetakan berwarna sebulan: "+col.toLocaleString("en-MY")+" muka surat\n- Kos sebulan: "+rm(c)+"\n- Anggaran setahun: "+rm(c*12)+"\n\nBerapakah potensi penjimatan dengan kadar Toshiba?");
 }
-['#cMach','#cMono','#cColour','#cCost'].forEach(s=>$(s).addEventListener('input',calc)); calc();
+CALC.forEach(s=>{const el=$(s);el.addEventListener('input',calc);el.addEventListener('blur',()=>{const v=num(el.value);if(v!==null)el.value=v.toLocaleString('en-MY');});}); calc();
 
 /* ============ SIMPAN KE TELEFON (vCard) ============ */
 $('#saveContact').addEventListener('click',()=>{
@@ -377,6 +406,9 @@ document.addEventListener('click',e=>{
   if(a.id==='qrDl') return track("muat-turun-qr","Muat turun QR");
   if(a.dataset.track) return track(a.dataset.track,a.textContent.trim());
 });
+
+/* ============ BUTANG WHATSAPP TERAPUNG: sembunyi semasa hero kelihatan ============ */
+if('IntersectionObserver' in window){const fab=$('.fab'),hero=$('.hero');new IntersectionObserver(es=>es.forEach(e=>fab.classList.toggle('off',e.isIntersecting))).observe(hero);}
 
 /* ============ HEADER BAYANG BILA SKROL ============ */
 const topBar=$('#top'); const onScroll=()=>topBar.classList.toggle('scrolled',scrollY>8); addEventListener('scroll',onScroll,{passive:true}); onScroll();
