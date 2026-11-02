@@ -94,7 +94,8 @@
 
 <script>
 const CONFIG = {
-  name:   "Shaziq Idham",
+  name:   "A. Shaziq Idham",
+  short:  "Shaziq",        // nama dalam ucapan WhatsApp ("Salam Shaziq, ...")
   role:   "Business Development Executive",
   phone:  "017-771 7206",
   wa:     "60177717206",
@@ -113,7 +114,7 @@ const GROUPS = [["all", "Semua"], ["mfp-compact", "Pencetak kompak"], ["mfp-stan
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const first=CONFIG.name.split(" ")[0];
+const first=CONFIG.short||CONFIG.name.split(" ")[0];
 const wa=t=>"https://wa.me/"+CONFIG.wa+"?text="+encodeURIComponent(t);
 document.querySelectorAll('[data-cfg]').forEach(e=>e.textContent=CONFIG[e.dataset.cfg]||"");
 document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya ingin mendapatkan maklumat lanjut tentang produk Toshiba untuk pejabat kami."));

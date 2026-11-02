@@ -213,7 +213,8 @@
 <script>
 /* ============ EDIT BUTIRAN ANDA DI SINI ============ */
 const CONFIG = {
-  name:   "Shaziq Idham",
+  name:   "A. Shaziq Idham",
+  short:  "Shaziq",        // nama dalam ucapan WhatsApp ("Salam Shaziq, ...")
   role:   "Business Development Executive",
   phone:  "017-771 7206",
   wa:     "60177717206",
@@ -315,7 +316,7 @@ const PAINS = [
 /* ============ RENDER ============ */
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const first=CONFIG.name.split(" ")[0];
+const first=CONFIG.short||CONFIG.name.split(" ")[0];
 const wa=t=>"https://wa.me/"+CONFIG.wa+"?text="+encodeURIComponent(t);
 document.querySelectorAll('[data-cfg]').forEach(e=>e.textContent=CONFIG[e.dataset.cfg]||"");
 document.querySelectorAll('.js-wa').forEach(a=>a.href=wa("Salam "+first+", saya ingin mendapatkan maklumat lanjut tentang penyelesaian Toshiba untuk pejabat kami."));
@@ -374,8 +375,8 @@ CALC.forEach(s=>{const el=$(s);el.addEventListener('input',calc);el.addEventList
 
 /* ============ SIMPAN KE TELEFON (vCard) ============ */
 $('#saveContact').addEventListener('click',()=>{
-  const [fn,...ln]=CONFIG.name.split(" ");
-  const v=["BEGIN:VCARD","VERSION:3.0","N:"+ln.join(" ")+";"+fn+";;;","FN:"+CONFIG.name,"ORG:Toshiba Tec Malaysia Sdn. Bhd.","TITLE:"+CONFIG.role,"TEL;TYPE=CELL:+"+CONFIG.wa,"EMAIL:"+CONFIG.email,"ADR;TYPE=WORK:;;"+CONFIG.branch+";;;;Malaysia","URL:"+location.origin+location.pathname,"NOTE:MOF "+CONFIG.mof,"END:VCARD"].join("\r\n");
+  const parts=CONFIG.name.split(" "), last=parts.pop();
+  const v=["BEGIN:VCARD","VERSION:3.0","N:"+last+";"+parts.join(" ")+";;;","FN:"+CONFIG.name,"ORG:Toshiba Tec Malaysia Sdn. Bhd.","TITLE:"+CONFIG.role,"TEL;TYPE=CELL:+"+CONFIG.wa,"EMAIL:"+CONFIG.email,"ADR;TYPE=WORK:;;"+CONFIG.branch+";;;;Malaysia","URL:"+location.origin+location.pathname,"NOTE:MOF "+CONFIG.mof,"END:VCARD"].join("\r\n");
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:"text/vcard"}));a.download=CONFIG.name.replace(/\s+/g,"_")+".vcf";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
 });
 
